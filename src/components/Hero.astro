@@ -1,0 +1,53 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const {
+  title,
+  subtitle = "Trusted, vet-informed advice for dog owners in the US.",
+  ctaText = "Explore Guides",
+  ctaLink = "#guides",
+} = Astro.props as Props;
+---
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">🐶 Vet-reviewed content</div>
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
+    <a href={ctaLink} class="btn btn-cta">{ctaText} →</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(180deg, var(--primary-light) 0%, #ffffff 100%);
+    padding: 72px 0 56px;
+    text-align: center;
+  }
+  .hero-inner {
+    max-width: 720px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+  }
+  .hero h1 {
+    color: var(--primary-dark);
+  }
+  .hero p {
+    font-size: 17px;
+    margin-bottom: 24px;
+  }
+</style>

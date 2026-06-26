@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import ProductBox from "../components/ProductBox.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import CTA from "../components/CTA.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+const insuranceArticles = allArticles
+  .filter((entry) => entry.data.category === "Insurance")
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base
+  title="Dog Insurance Guides"
+  description="Compare top dog insurance plans and learn what's actually covered."
+>
+  <Hero
+    title="Is Pet Insurance Worth It?"
+    subtitle="Compare top-rated dog insurance plans and find the right coverage for your budget."
+    ctaText="Compare Plans"
+    ctaLink="#plans"
+  />
+
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="section-title">
+        <h2>Top-Rated Insurance Plans</h2>
+        <p>Compared on coverage, claim speed, and customer satisfaction.</p>
+      </div>
+      <div class="grid grid-3">
+        <ProductBox
+          title="Best Overall Plan"
+          description="Comprehensive accident & illness coverage with fast claims processing."
+          link="#"
+          rating={4.8}
+          price="From $25/mo"
+          badge="Best Overall"
+        />
+        <ProductBox
+          title="Best for Budget Owners"
+          description="Affordable accident-only coverage for cost-conscious owners."
+          link="#"
+          rating={4.5}
+          price="From $12/mo"
+        />
+        <ProductBox
+          title="Best for Senior Dogs"
+          description="No upper age limit and strong chronic-condition coverage."
+          link="#"
+          rating={4.6}
+          price="From $35/mo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Insurance Articles</h2>
+        <p>{insuranceArticles.length} guide{insuranceArticles.length !== 1 ? "s" : ""} and counting.</p>
+      </div>
+
+      {insuranceArticles.length > 0 ? (
+        <div class="grid grid-3">
+          {insuranceArticles.map((entry) => (
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/insurance/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">More insurance guides coming soon.</p>
+      )}
+    </div>
+  </section>
+
+  <CTA
+    title="Get a Free Quote in 60 Seconds"
+    subtitle="Compare quotes from top-rated providers, no obligation."
+    buttonText="Get My Quote"
+    buttonLink="#"
+  />
+
+  <Newsletter
+    title="Insurance Tips Before You Buy"
+    subtitle="Avoid common mistakes — get our free pet insurance checklist."
+  />
+</Base>
+
+<style>
+  .alt-bg { background: var(--bg-soft); }
+  .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+</style>

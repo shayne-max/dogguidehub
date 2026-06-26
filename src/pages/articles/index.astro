@@ -1,0 +1,94 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Hero from "../../components/Hero.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+const sorted = allArticles.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const categories = ["All", "Food", "Health", "Breeds", "Insurance", "Training"];
+---
+<Base title="All Articles" description="Browse all DogGuideHub articles on dog food, health, breeds, and insurance.">
+  <Hero
+    title="All Articles"
+    subtitle="Every guide we've published, all in one place."
+    ctaText="Browse Below"
+    ctaLink="#list"
+  />
+
+  <section class="section" id="list">
+    <div class="container">
+      <div class="filter-bar">
+        {categories.map((cat) => (
+          <button class="filter-btn" data-filter={cat.toLowerCase()}>{cat}</button>
+        ))}
+      </div>
+
+      <div class="grid grid-3" id="article-grid">
+        {sorted.map((entry) => (
+          <div class="article-item" data-category={entry.data.category.toLowerCase()}>
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/${entry.data.category.toLowerCase()}/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".article-item");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.getAttribute("data-filter");
+      items.forEach((item) => {
+        const show = filter === "all" || item.getAttribute("data-category") === filter;
+        (item as HTMLElement).style.display = show ? "block" : "none";
+      });
+    });
+  });
+
+  // Default to "All" active
+  document.querySelector('.filter-btn[data-filter="all"]')?.classList.add("active");
+</script>
+
+<style>
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .filter-btn {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+  .filter-btn:hover {
+    background: var(--primary-light);
+  }
+  .filter-btn.active {
+    background: #a3263c;
+    color: #fff;
+    border-color: #a3263c;
+  }
+</style>

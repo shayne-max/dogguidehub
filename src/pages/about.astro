@@ -1,0 +1,62 @@
+---
+import Base from "../layouts/Base.astro";
+import Newsletter from "../components/Newsletter.astro";
+---
+<Base
+  title="About DogGuideHub"
+  description="Learn about DogGuideHub's mission to provide trusted, vet-reviewed dog care guidance."
+>
+  <section class="section about-page">
+    <div class="container">
+      <h1>About DogGuideHub</h1>
+      <p class="lead">
+        DogGuideHub was created to give dog owners clear, trustworthy answers — without the guesswork.
+      </p>
+
+      <h2>Our Mission</h2>
+      <p>
+        Raising a dog comes with constant questions: what to feed them, how to spot health problems
+        early, which breed fits your lifestyle, and how to protect them financially. We sift through
+        research, veterinary guidance, and real owner experience to give you straightforward,
+        actionable answers.
+      </p>
+
+      <h2>How We Create Our Content</h2>
+      <p>
+        Every guide on DogGuideHub is researched with accuracy and practicality in mind. We reference
+        veterinary sources, industry data, and product comparisons to help you make informed decisions
+        for your dog — whether that's choosing a food brand, understanding a symptom, or comparing
+        insurance plans.
+      </p>
+
+      <h2>How We Support This Site</h2>
+      <p>
+        DogGuideHub is reader-supported. Some links on this Site are affiliate links, meaning we may
+        earn a commission if you make a purchase or sign up through them, at no extra cost to you. This
+        allows us to keep producing free content for dog owners. Learn more in our
+        <a href="/affiliate-disclosure">Affiliate Disclosure</a>.
+      </p>
+
+      <h2>Get In Touch</h2>
+      <p>
+        Have a question, suggestion, or correction? We'd love to hear from you at
+        <a href="mailto:contact@dogguidehub.com">contact@dogguidehub.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <Newsletter />
+</Base>
+
+<style>
+  .about-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+  .about-page h1 { color: var(--primary-dark); }
+  .about-page h2 { margin-top: 32px; color: var(--primary-dark); font-size: 20px; }
+  .about-page p { color: var(--text-muted); }
+  .about-page a { color: var(--primary); font-weight: 600; }
+  .lead { font-size: 18px; color: var(--text); }
+</style>

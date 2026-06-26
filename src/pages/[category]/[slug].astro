@@ -1,0 +1,122 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import ProductBox from "../../components/ProductBox.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import Newsletter from "../../components/Newsletter.astro";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("articles", ({ data }) => !data.draft);
+  return articles.map((entry) => ({
+    params: {
+      category: entry.data.category.toLowerCase(),
+      slug: entry.id,
+    },
+    props: { entry, allArticles: articles },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"articles">;
+  allArticles: CollectionEntry<"articles">[];
+}
+
+const { entry, allArticles } = Astro.props;
+const { Content } = await render(entry);
+const { title, excerpt, category, image, date, metaDescription, affiliateProducts } = entry.data;
+
+// 相关文章：同分类，排除自己，最多取3篇
+const related = allArticles
+  .filter((a) => a.data.category === category && a.id !== entry.id)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+<Base title={title} description={metaDescription || excerpt}>
+  <article class="article">
+    <div class="container article-header">
+      <span class="category-tag">{category}</span>
+      <h1>{title}</h1>
+      <p class="excerpt">{excerpt}</p>
+      <p class="date">Published {date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+    </div>
+
+    {image && (
+      <div class="container">
+        <img src={image} alt={title} class="cover-image" />
+      </div>
+    )}
+
+    <div class="container article-body">
+      <Content />
+    </div>
+
+    {affiliateProducts && affiliateProducts.length > 0 && (
+      <section class="container product-section">
+        <h2>Recommended Products</h2>
+        <div class="grid grid-3">
+          {affiliateProducts.map((p) => (
+            <ProductBox
+              title={p.title}
+              description={p.description}
+              link={p.link}
+              price={p.price}
+              rating={p.rating}
+              badge={p.badge}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="container related-section">
+        <h2>Related Articles</h2>
+        <div class="grid grid-3">
+          {related.map((r) => (
+            <ArticleCard
+              title={r.data.title}
+              excerpt={r.data.excerpt}
+              link={`/${r.data.category.toLowerCase()}/${r.id}`}
+              category={r.data.category}
+              image={r.data.image}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="container">
+      <Newsletter />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .article-header { max-width: 720px; margin: 0 auto; padding-top: 48px; text-align: center; }
+  .category-tag {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .excerpt { font-size: 17px; }
+  .date { font-size: 13px; color: #9ca3af; }
+  .cover-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 24px auto;
+    border-radius: var(--radius);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 12px 20px 40px; }
+  .article-body :global(h2) { margin-top: 32px; color: var(--primary-dark); }
+  .article-body :global(a) { color: var(--primary); font-weight: 600; text-decoration: underline; }
+  .product-section, .related-section { padding: 40px 20px; }
+  .product-section h2, .related-section h2 { text-align: center; margin-bottom: 24px; }
+  .related-section { background: var(--bg-soft); border-radius: var(--radius); }
+</style>

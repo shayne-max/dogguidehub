@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+const breedArticles = allArticles
+  .filter((entry) => entry.data.category === "Breeds")
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base
+  title="Dog Breed Guides"
+  description="Comprehensive, vet-reviewed dog breed guides covering temperament, health risks, diet, and care tips."
+>
+  <Hero
+    title="Dog Breed Guides"
+    subtitle="Everything you need to know before — and after — bringing home a new breed."
+    ctaText="Browse Breeds"
+    ctaLink="#breeds-list"
+  />
+
+  <section class="section" id="breeds-list">
+    <div class="container">
+      <div class="section-title">
+        <h2>Breed Guides</h2>
+        <p>{breedArticles.length} guide{breedArticles.length !== 1 ? "s" : ""} and counting.</p>
+      </div>
+
+      {breedArticles.length > 0 ? (
+        <div class="grid grid-3">
+          {breedArticles.map((entry) => (
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/breeds/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">More breed guides coming soon.</p>
+      )}
+    </div>
+  </section>
+
+  <Newsletter
+    title="Find Your Perfect Breed Match"
+    subtitle="Get our free breed-matching checklist delivered to your inbox."
+  />
+</Base>
+
+<style>
+  .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+</style>

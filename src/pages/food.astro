@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import ProductBox from "../components/ProductBox.astro";
+import CTA from "../components/CTA.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+const foodArticles = allArticles
+  .filter((entry) => entry.data.category === "Food")
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base
+  title="Best Dog Food Guides"
+  description="Vet-reviewed dog food recommendations, ingredient breakdowns, and recall alerts."
+>
+  <Hero
+    title="Best Dog Food Guides"
+    subtitle="Top-rated nutrition picks reviewed by our team — for every breed, age, and budget."
+    ctaText="See Top Picks"
+    ctaLink="#top-picks"
+  />
+
+  <section class="section" id="top-picks">
+    <div class="container">
+      <div class="section-title">
+        <h2>Top Rated Dog Foods</h2>
+        <p>Compared on ingredients, vet recommendations, and owner reviews.</p>
+      </div>
+      <div class="grid grid-3">
+        <ProductBox
+          title="Best Overall Dry Food"
+          description="Balanced nutrition with real meat as the first ingredient."
+          link="#"
+          rating={4.8}
+          price="$59.99"
+          badge="Best Overall"
+        />
+        <ProductBox
+          title="Best for Sensitive Stomachs"
+          description="Limited-ingredient formula that's gentle on digestion."
+          link="#"
+          rating={4.6}
+          price="$48.99"
+        />
+        <ProductBox
+          title="Best Budget-Friendly Food"
+          description="Quality nutrition without the premium price tag."
+          link="#"
+          rating={4.4}
+          price="$32.99"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Food & Nutrition Articles</h2>
+        <p>{foodArticles.length} guide{foodArticles.length !== 1 ? "s" : ""} and counting.</p>
+      </div>
+
+      {foodArticles.length > 0 ? (
+        <div class="grid grid-3">
+          {foodArticles.map((entry) => (
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/food/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">More food guides coming soon.</p>
+      )}
+    </div>
+  </section>
+
+  <CTA
+    title="Worried about a recent recall?"
+    subtitle="Check our live dog food recall tracker before you buy."
+    buttonText="View Recalls"
+    buttonLink="#"
+  />
+
+  <Newsletter
+    title="Get Food Recall Alerts First"
+    subtitle="We'll email you the moment a dog food recall is announced."
+  />
+</Base>
+
+<style>
+  .alt-bg { background: var(--bg-soft); }
+  .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+</style>

@@ -1,11 +1,100 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import ProductBox from "../components/ProductBox.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import CTA from "../components/CTA.astro";
+import Newsletter from "../components/Newsletter.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+
+const popular = allArticles
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
+<Base title="Best Dog Care & Health Guides">
 
-<Layout>
-	<Welcome />
-</Layout>
+  <Hero
+    title="Best Dog Care & Health Guides"
+    subtitle="Trusted, vet-reviewed advice for dog owners in the US — food, health, breeds, and insurance."
+    ctaText="Explore Guides"
+    ctaLink="#guides"
+  />
+
+  <section class="section" id="guides">
+    <div class="container">
+      <div class="section-title">
+        <h2>Popular Guides</h2>
+        <p>Hand-picked, expert-reviewed articles to help you raise a healthier, happier dog.</p>
+      </div>
+
+      {popular.length > 0 ? (
+        <div class="grid grid-3">
+          {popular.map((entry) => (
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/${entry.data.category.toLowerCase()}/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">More guides coming soon.</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Best Dog Products</h2>
+        <p>Independently tested and reader-recommended picks.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <ProductBox
+          title="Best Dog Food"
+          description="Top-rated, vet-recommended nutrition for everyday health."
+          link="#"
+          rating={4.7}
+          price="$54.99"
+          badge="Editor's Pick"
+        />
+        <ProductBox
+          title="Best Joint Supplement"
+          description="Glucosamine + chondroitin formula loved by senior dog owners."
+          link="#"
+          rating={4.6}
+          price="$29.99"
+        />
+        <ProductBox
+          title="Best Pet Insurance Plan"
+          description="Comprehensive accident & illness coverage with fast claims."
+          link="#"
+          rating={4.5}
+          price="From $25/mo"
+          badge="Most Popular"
+        />
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Not sure where to start?"
+    subtitle="Take our 60-second quiz to get personalized dog care recommendations."
+    buttonText="Take the Quiz"
+    buttonLink="#"
+  />
+
+  <Newsletter />
+
+</Base>
+
+<style>
+  .alt-bg { background: var(--bg-soft); }
+  .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+</style>

@@ -1,0 +1,155 @@
+---
+export interface Slide {
+  title: string;
+  excerpt: string;
+  image?: string;
+  link: string;
+  category?: string;
+}
+
+export interface Props {
+  slides: Slide[];
+}
+
+const { slides } = Astro.props as Props;
+---
+{slides.length > 0 && (
+  <section class="carousel" id="hero-carousel">
+    <div class="carousel-track">
+      {slides.map((slide, i) => (
+        <a href={slide.link} class="slide" data-index={i} style={i === 0 ? "" : "display:none;"}>
+          <div class="slide-image" style={slide.image ? `background-image:url(${slide.image})` : ""}>
+            <div class="slide-overlay"></div>
+          </div>
+          <div class="slide-content">
+            {slide.category && <span class="slide-category">{slide.category}</span>}
+            <h2>{slide.title}</h2>
+            <p>{slide.excerpt}</p>
+            <span class="slide-cta">Read Guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    {slides.length > 1 && (
+      <div class="carousel-dots">
+        {slides.map((_, i) => (
+          <button class="dot" data-dot={i} aria-label={`Slide ${i + 1}`}></button>
+        ))}
+      </div>
+    )}
+  </section>
+)}
+
+<script>
+  const track = document.querySelector(".carousel-track");
+  if (track) {
+    const slides = Array.from(track.querySelectorAll(".slide")) as HTMLElement[];
+    const dots = Array.from(document.querySelectorAll(".dot")) as HTMLElement[];
+    let current = 0;
+    let interval: ReturnType<typeof setInterval>;
+
+    function show(index: number) {
+      slides.forEach((s, i) => {
+        s.style.display = i === index ? "block" : "none";
+      });
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      current = index;
+    }
+
+    function next() {
+      show((current + 1) % slides.length);
+    }
+
+    function startAutoplay() {
+      interval = setInterval(next, 6000);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", (e) => {
+        e.preventDefault();
+        clearInterval(interval);
+        show(i);
+        startAutoplay();
+      });
+    });
+
+    if (dots[0]) dots[0].classList.add("active");
+    if (slides.length > 1) startAutoplay();
+  }
+</script>
+
+<style>
+  .carousel {
+    position: relative;
+    max-width: var(--max-width);
+    margin: 24px auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .slide {
+    display: block;
+    position: relative;
+    color: #fff;
+  }
+  .slide-image {
+    aspect-ratio: 16/6;
+    background-color: var(--primary-dark);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(30,58,138,0.85) 0%, rgba(30,58,138,0.35) 60%, rgba(30,58,138,0.1) 100%);
+  }
+  .slide-content {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 40px;
+    max-width: 560px;
+  }
+  .slide-category {
+    display: inline-block;
+    background: var(--cta);
+    color: var(--cta-text);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    width: fit-content;
+  }
+  .slide-content h2 { color: #fff; font-size: clamp(22px, 3.5vw, 32px); }
+  .slide-content p { color: #e5e7eb; font-size: 15px; margin-bottom: 14px; }
+  .slide-cta {
+    font-weight: 700;
+    color: var(--cta);
+  }
+  .carousel-dots {
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
+    display: flex;
+    gap: 8px;
+  }
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .dot.active { background: var(--cta); }
+
+  @media (max-width: 640px) {
+    .slide-image { aspect-ratio: 4/5; }
+    .slide-content { padding: 24px; max-width: 100%; }
+  }
+</style>

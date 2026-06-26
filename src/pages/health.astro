@@ -1,0 +1,91 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import ProductBox from "../components/ProductBox.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+const healthArticles = allArticles
+  .filter((entry) => entry.data.category === "Health")
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base
+  title="Dog Health Guides"
+  description="Vet-reviewed dog health guides covering symptoms, prevention, and care."
+>
+  <Hero
+    title="Dog Health Guides"
+    subtitle="Recognize symptoms early and keep your dog healthy with vet-reviewed advice."
+    ctaText="Browse Health Topics"
+    ctaLink="#health-topics"
+  />
+
+  <section class="section" id="health-topics">
+    <div class="container">
+      <div class="section-title">
+        <h2>Health Articles</h2>
+        <p>{healthArticles.length} guide{healthArticles.length !== 1 ? "s" : ""} and counting.</p>
+      </div>
+
+      {healthArticles.length > 0 ? (
+        <div class="grid grid-3">
+          {healthArticles.map((entry) => (
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/health/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">More health guides coming soon.</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Recommended Health Products</h2>
+      </div>
+      <div class="grid grid-3">
+        <ProductBox
+          title="Best Joint Supplement"
+          description="Vet-recommended glucosamine formula for mobility support."
+          link="#"
+          rating={4.7}
+          price="$29.99"
+        />
+        <ProductBox
+          title="Best Dental Chews"
+          description="Reduces plaque and freshens breath, vet-approved."
+          link="#"
+          rating={4.5}
+          price="$18.99"
+        />
+        <ProductBox
+          title="Best At-Home Health Monitor"
+          description="Track activity and vital signs to catch issues early."
+          link="#"
+          rating={4.4}
+          price="$79.99"
+        />
+      </div>
+    </div>
+  </section>
+
+  <Newsletter
+    title="Stay Ahead of Health Issues"
+    subtitle="Weekly tips on prevention, symptoms, and vet-approved care."
+  />
+</Base>
+
+<style>
+  .alt-bg { background: var(--bg-soft); }
+  .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+</style>

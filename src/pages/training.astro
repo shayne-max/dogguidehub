@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import ProductBox from "../components/ProductBox.astro";
+import CTA from "../components/CTA.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const allArticles = await getCollection("articles", ({ data }) => !data.draft);
+const trainingArticles = allArticles
+  .filter((entry) => entry.data.category === "Training")
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base
+  title="Dog Training Guides"
+  description="Vet-aligned, positive-reinforcement dog training guides covering puppies, obedience, behavior, and socialization."
+>
+  <Hero
+    title="Dog Training Guides"
+    subtitle="Science-backed, positive-reinforcement training advice to build a confident, well-mannered dog."
+    ctaText="Browse Training Topics"
+    ctaLink="#training-topics"
+  />
+
+  <section class="section" id="training-topics">
+    <div class="container">
+      <div class="section-title">
+        <h2>Training Articles</h2>
+        <p>{trainingArticles.length} guide{trainingArticles.length !== 1 ? "s" : ""} and counting.</p>
+      </div>
+
+      {trainingArticles.length > 0 ? (
+        <div class="grid grid-3">
+          {trainingArticles.map((entry) => (
+            <ArticleCard
+              title={entry.data.title}
+              excerpt={entry.data.excerpt}
+              link={`/training/${entry.id}`}
+              category={entry.data.category}
+              image={entry.data.image}
+              date={entry.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">More training guides coming soon.</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Recommended Training Gear</h2>
+      </div>
+      <div class="grid grid-3">
+        <ProductBox
+          title="Front-Clip No-Pull Harness"
+          description="Gently turns your dog's body when they pull, protecting the trachea while giving you better control."
+          link="#"
+          rating={4.6}
+          price="$26.99"
+          badge="Best Seller"
+        />
+        <ProductBox
+          title="Training Treat Pouch"
+          description="Keeps high-value rewards instantly accessible for positive reinforcement training."
+          link="#"
+          rating={4.5}
+          price="$16.99"
+        />
+        <ProductBox
+          title="Kong Classic Chew Toy"
+          description="Durable, stuffable enrichment toy that supports crate training and reduces destructive chewing."
+          link="#"
+          rating={4.8}
+          price="$11.99"
+        />
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Struggling with a specific behavior?"
+    subtitle="Browse our full training library or get weekly tips sent to your inbox."
+    buttonText="See All Guides"
+    buttonLink="/training"
+  />
+
+  <Newsletter
+    title="Get Weekly Training Tips"
+    subtitle="Positive-reinforcement training advice, delivered straight to your inbox."
+  />
+</Base>
+
+<style>
+  .alt-bg { background: var(--bg-soft); }
+  .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+</style>

@@ -1,0 +1,153 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Trusted, vet-informed dog care guides — food, health, breeds and insurance advice for dog owners.",
+} = Astro.props as Props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | DogGuideHub</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dogguidehub.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo">🐾 DogGuideHub</a>
+        <nav class="nav">
+          <a href="/breeds">Breeds</a>
+          <a href="/food">Food</a>
+          <a href="/health">Health</a>
+          <a href="/training">Training</a>
+          <a href="/insurance">Insurance</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-logo">🐾 DogGuideHub</p>
+          <p>Trusted advice for dog owners, written and reviewed with care.</p>
+        </div>
+        <nav class="footer-nav">
+        <a href="/breeds">Breeds</a>
+        <a href="/food">Food</a>
+        <a href="/health">Health</a>
+        <a href="/training">Training</a>
+        <a href="/insurance">Insurance</a>
+        <a href="/about">About</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+</nav>
+        <p class="disclosure">
+          As an affiliate, DogGuideHub may earn a commission from qualifying purchases made through links on this site.
+        </p>
+        <p class="copyright">© {new Date().getFullYear()} DogGuideHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <style>
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 19px;
+        color: var(--primary-dark);
+      }
+      .nav {
+        display: flex;
+        gap: 22px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .nav a {
+        color: var(--text);
+        opacity: 0.85;
+        padding: 6px 14px;
+        border-radius: 999px;
+        transition: background .15s ease, color .15s ease;
+      }
+      .nav a:hover,
+      .nav a.active {
+      background: #a3263c;
+      color: #ffffff;
+      opacity: 1;
+      font-weight: 800;
+      }
+
+      @media (max-width: 640px) {
+        .nav { gap: 12px; font-size: 13px; }
+      }
+
+      .site-footer {
+        background: var(--primary-dark);
+        color: #e5e7eb;
+        margin-top: 40px;
+      }
+      .footer-inner {
+        padding: 44px 20px 28px;
+        display: grid;
+        gap: 18px;
+      }
+      .footer-logo {
+        font-weight: 800;
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 6px;
+      }
+      .footer-nav {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-weight: 600;
+      }
+      .footer-nav a { color: #cbd5e1; }
+      .footer-nav a:hover { color: var(--cta); }
+      .disclosure {
+        font-size: 13px;
+        color: #94a3b8;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        padding-top: 16px;
+        margin-top: 6px;
+      }
+      .copyright {
+        font-size: 13px;
+        color: #94a3b8;
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>

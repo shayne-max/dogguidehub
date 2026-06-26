@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  buttonText?: string;
+  buttonLink?: string;
+}
+
+const {
+  title,
+  subtitle = "",
+  buttonText = "Get Started",
+  buttonLink = "#",
+} = Astro.props as Props;
+---
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>{title}</h2>
+      {subtitle && <p>{subtitle}</p>}
+    </div>
+    <a href={buttonLink} class="btn btn-cta">{buttonText} →</a>
+  </div>
+</section>
+
+<style>
+  .cta {
+    background: var(--primary-dark);
+    border-radius: var(--radius);
+    margin: 16px auto;
+    max-width: var(--max-width);
+  }
+  .cta-inner {
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 36px 20px;
+  }
+  .cta h2 { color: #fff; margin-bottom: 4px; }
+  .cta p { color: #cbd5e1; margin: 0; }
+</style>

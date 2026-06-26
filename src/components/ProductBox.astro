@@ -1,0 +1,126 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  link: string;
+  image?: string;
+  price?: string;
+  rating?: number; // 0-5
+  badge?: string;
+}
+
+const {
+  title,
+  description,
+  link,
+  image,
+  price,
+  rating = 4.5,
+  badge,
+} = Astro.props as Props;
+
+const fullStars = Math.floor(rating);
+const hasHalf = rating % 1 >= 0.5;
+---
+<div class="product-box">
+  {badge && <span class="badge">{badge}</span>}
+
+  {image && (
+    <div class="product-img">
+      <img src={image} alt={title} loading="lazy" />
+    </div>
+  )}
+
+  <div class="product-body">
+    <h3>{title}</h3>
+
+    <div class="rating" aria-label={`Rated ${rating} out of 5`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <span class={i < fullStars ? "star full" : i === fullStars && hasHalf ? "star half" : "star"}>★</span>
+      ))}
+      <span class="rating-num">{rating.toFixed(1)}</span>
+    </div>
+
+    <p>{description}</p>
+
+    <div class="product-footer">
+      {price && <span class="price">{price}</span>}
+      <a href={link} target="_blank" rel="nofollow sponsored noopener" class="btn btn-cta">
+        Check Price →
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-box {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin: 0;
+    background: #fff;
+    box-shadow: var(--shadow);
+    transition: box-shadow .2s ease, transform .2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .product-box:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+  .badge {
+    position: absolute;
+    top: -10px;
+    left: 14px;
+    background: var(--cta);
+    color: var(--cta-text);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+  }
+  .product-img {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: var(--bg-soft);
+    aspect-ratio: 4/3;
+  }
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .product-body { flex: 1; display: flex; flex-direction: column; }
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 8px;
+  }
+  .star { color: #d1d5db; font-size: 15px; }
+  .star.full { color: var(--cta); }
+  .star.half { color: var(--cta); opacity: 0.5; }
+  .rating-num {
+    margin-left: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .product-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 8px;
+  }
+  .price {
+    font-weight: 800;
+    color: var(--primary-dark);
+    font-size: 17px;
+  }
+</style>
