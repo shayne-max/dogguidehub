@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "ls node_modules/@astrojs/ ; cat node_modules/@astrojs/sitemap/package.json ; astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
