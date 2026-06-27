@@ -10,6 +10,221 @@ const allArticles = await getCollection("articles", ({ data }) => !data.draft);
 const healthArticles = allArticles
   .filter((entry) => entry.data.category === "Health")
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const products = [
+  {
+    title: "Nutramax Cosequin Joint Health Chewable Tablets",
+    description: "Glucosamine, chondroitin, and MSM chewable tablets supporting healthy joints for all breeds, 132 count.",
+    link: "https://www.amazon.com/Cosequin-DS-Maximum-Strength-Chewable/dp/B003ULL1NQ?linkCode=ll2&tag=dogguidehub-20&linkId=dd1c19bf29c177a4ea4094660f13e870&language=en_US&ref_=as_li_ss_tl",
+    price: "$34.91",
+    rating: 4.7,
+    badge: "Best Overall Joint Support",
+  },
+  {
+    title: "VetIQ Glucosamine Hip & Joint Soft Chews",
+    description: "Chicken-flavored chews with MSM and krill for hip and joint support, 180 count.",
+    link: "https://www.amazon.com/Glucosamine-Supplement-Supplies-Flavored-Chewables/dp/B01AMTU1ZM?linkCode=ll2&tag=dogguidehub-20&linkId=97eb1414b6bc29d68723857619a90a21&language=en_US&ref_=as_li_ss_tl",
+    price: "$22.94",
+    rating: 4.6,
+  },
+  {
+    title: "Nutramax Proviable Probiotics",
+    description: "Multi-strain probiotic and prebiotic capsules for daily digestive health support, 30 capsules.",
+    link: "https://www.amazon.com/Nutramax-Supplement-Multi-Strain-Probiotics-Prebiotics/dp/B0050JM626?linkCode=ll2&tag=dogguidehub-20&linkId=db7a8c96f475f8ebe55d3eadadd49957&language=en_US&ref_=as_li_ss_tl",
+    price: "$19.97",
+    rating: 4.6,
+    badge: "Best for Digestive Health",
+  },
+  {
+    title: "Veterinary Formula Antiseptic & Antifungal Spray",
+    description: "Medicated spray for skin irritation, hot spots, and minor infections, 8 fl oz.",
+    link: "https://www.amazon.com/SynergyLabs-Veterinary-Clinical-Antiseptic-Antifungal/dp/B0037Z6VLM?linkCode=ll2&tag=dogguidehub-20&linkId=a6a985b40a9b0899ed80aaaa3311cf5b&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.92",
+    rating: 4.5,
+    badge: "Best Value Itch Relief",
+  },
+  {
+    title: "Virbac Epi-Otic Advanced Ear Cleanser",
+    description: "Gentle yet powerful ear cleanser for dogs and cats of all ages, 4 oz.",
+    link: "https://www.amazon.com/Virbac-Epi-Otic-Advanced-Ear-Cleaner/dp/B0056EAKUA?linkCode=ll2&tag=dogguidehub-20&linkId=02d3325df789454bcb8fb349cf4b80c8&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.59",
+    rating: 4.7,
+    badge: "Vet Favorite",
+  },
+  {
+    title: "Seresto Flea & Tick Collar (Over 18 lbs.)",
+    description: "Vet-recommended 8-month flea and tick protection collar for dogs over 18 lbs.",
+    link: "https://www.amazon.com/Seresto-Vet-Recommended-Treatment-Prevention-Collar/dp/B00B8CG602?linkCode=ll2&tag=dogguidehub-20&linkId=0104f02c57a2c75dba72560b64b0b316&language=en_US&ref_=as_li_ss_tl",
+    price: "$59.92",
+    rating: 4.5,
+    badge: "Longest Protection",
+  },
+  {
+    title: "Nutramax Cosequin with Omega-3s Soft Chews",
+    description: "Glucosamine, chondroitin, MSM, and omega-3s supporting joint, skin, and coat health, 120 count.",
+    link: "https://www.amazon.com/Cosequin-Chews-Maximum-Strength-Omega/dp/B01G3V3P0Q?linkCode=ll2&tag=dogguidehub-20&linkId=e4d35bbfe94f5f81e07596a3349f9308&language=en_US&ref_=as_li_ss_tl",
+    price: "$39.99",
+    rating: 4.7,
+  },
+  {
+    title: "Senior Advanced Glucosamine Chondroitin Chews",
+    description: "Bacon-flavored hip and joint pain relief chews for senior dogs, 120 count.",
+    link: "https://www.amazon.com/Senior-Advanced-Glucosamine-Joint-Supplement/dp/B0B56G9DX7?linkCode=ll2&tag=dogguidehub-20&linkId=0a0489d77a6ddd645858e52fded420e7&language=en_US&ref_=as_li_ss_tl",
+    price: "$32.84",
+    rating: 4.5,
+  },
+  {
+    title: "Nutramax Cosequin for Senior Dogs",
+    description: "Glucosamine, chondroitin, MSM, omega-3s, and beta-glucan supporting joint and immune health, 60 count.",
+    link: "https://www.amazon.com/Nutramax-COSEQUIN-Senior-Glucosamine-Chondroitin/dp/B07218JGWH?linkCode=ll2&tag=dogguidehub-20&linkId=5920052cc5525e36662930c1c7a033c8&language=en_US&ref_=as_li_ss_tl",
+    price: "$24.97",
+    rating: 4.6,
+  },
+  {
+    title: "VetriScience Extra Strength Hip & Joint Chews",
+    description: "Vet-formulated chicken-flavored chews with glucosamine, MSM, and green-lipped mussel, 120 count.",
+    link: "https://www.amazon.com/VetriScience-Glycoflex-Clinically-Proven-Supplement/dp/B002LVTTYE?linkCode=ll2&tag=dogguidehub-20&linkId=8fba78fc0f99fa8ee54451644974e44d&language=en_US&ref_=as_li_ss_tl",
+    price: "$28.92",
+    rating: 4.6,
+  },
+  {
+    title: "Purina Pro Plan FortiFlora Probiotic Supplement",
+    description: "Vet-recommended canine nutritional probiotic supplement, 30 ct. boxes.",
+    link: "https://www.amazon.com/Purina-Veterinary-Fortiflora-Nutritional-Supplement/dp/B001650NNW?linkCode=ll2&tag=dogguidehub-20&linkId=875810d7dda70546ae9b95472a33099d&language=en_US&ref_=as_li_ss_tl",
+    price: "$30.99",
+    rating: 4.7,
+  },
+  {
+    title: "Native Pet Dog Probiotic Powder",
+    description: "Vet-formulated 6B CFU dog-specific probiotic powder supporting stool quality and diet transitions, 30 scoops.",
+    link: "https://www.amazon.com/Native-Pet-Probiotic-Dogs-Probiotics/dp/B0BS4SVVCK?linkCode=ll2&tag=dogguidehub-20&linkId=ed6d8c3a08ca3f2fd0906abd9f913741&language=en_US&ref_=as_li_ss_tl",
+    price: "$19.99",
+    rating: 4.5,
+  },
+  {
+    title: "Purina Pro Plan FortiFlora Chewable Tablets",
+    description: "Chewable probiotic tablets supporting digestive and immune health, plus occasional diarrhea relief.",
+    link: "https://www.amazon.com/Purina-Fortiflora-Veterinary-FortiFlora-Supplements/dp/B083XD2V4C?linkCode=ll2&tag=dogguidehub-20&linkId=ddb868b2ee0ebe6402de74fc3c31cbd3&language=en_US&ref_=as_li_ss_tl",
+    price: "$80.99",
+    rating: 4.7,
+  },
+  {
+    title: "Douxo S3 Calm Itch Soothing Mousse",
+    description: "Soothing mousse for itchy, irritated, or allergic skin in dogs and cats, 5 fl oz.",
+    link: "https://www.amazon.com/Douxo-Contains-Ophytrium-Soothing-Irritated/dp/B0947957N5?linkCode=ll2&tag=dogguidehub-20&linkId=cc92b69a7f5bdd009f2b7149b21801a2&language=en_US&ref_=as_li_ss_tl",
+    price: "$25.96",
+    rating: 4.5,
+  },
+  {
+    title: "Vetnique Dermabliss Chlorhexidine Spray",
+    description: "Alcohol-free, no-sting antibacterial and antifungal spray for hot spots and yeast, 8 oz.",
+    link: "https://www.amazon.com/Vetnique-Dermabliss-Chlorhexidine-Antispetic-Irritations/dp/B0CD2SP76T?linkCode=ll2&tag=dogguidehub-20&linkId=9d0300ad73330a22badb49224f121046&language=en_US&ref_=as_li_ss_tl",
+    price: "$17.99",
+    rating: 4.5,
+  },
+  {
+    title: "VetWELL Ear Cleaner (Cucumber Melon)",
+    description: "Otic rinse for controlling ear infections and odor in dogs and cats, 8 oz.",
+    link: "https://www.amazon.com/VetWELL-Ear-Cleaner-Dogs-Cats/dp/B07657TQ5X?linkCode=ll2&tag=dogguidehub-20&linkId=8f34cc1e9d0ddcaf0e7b19b445e07a20&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.99",
+    rating: 4.6,
+  },
+  {
+    title: "Pet MD Dog Ear Cleaning Wipes",
+    description: "Soothing aloe vera and eucalyptus ear care wipes, 100 count.",
+    link: "https://www.amazon.com/Pet-MD-Cleaner-Cleanser-Eucalyptus/dp/B01IRO7WR4?linkCode=ll2&tag=dogguidehub-20&linkId=4c0c4e03cef1a1e01f0b32b2c0a313c2&language=en_US&ref_=as_li_ss_tl",
+    price: "$14.99",
+    rating: 4.6,
+  },
+  {
+    title: "K9 Advantix II XL Flea, Tick & Mosquito Treatment",
+    description: "Vet-recommended monthly flea, tick, and mosquito prevention for dogs over 55 lbs.",
+    link: "https://www.amazon.com/Flea-tick-Prevention-Treatment-Advantix/dp/B07NX2VWYC?linkCode=ll2&tag=dogguidehub-20&linkId=934b0fe54e623089e84fdc02c56f8717&language=en_US&ref_=as_li_ss_tl",
+    price: "$19.97",
+    rating: 4.5,
+  },
+  {
+    title: "Advantage II Small Dog Flea Treatment",
+    description: "Vet-recommended 4-month flea treatment and prevention supply for dogs 3-10 lbs.",
+    link: "https://www.amazon.com/Flea-Lice-Treatment-doses-Advantage/dp/B004QRHSDU?linkCode=ll2&tag=dogguidehub-20&linkId=0eec1072e02075386515392dfcf66e67&language=en_US&ref_=as_li_ss_tl",
+    price: "$50.98",
+    rating: 4.5,
+  },
+  {
+    title: "Hemp Calming Chews with Melatonin",
+    description: "Advanced calming chews with melatonin for separation anxiety, barking, and stress relief, 240 treats.",
+    link: "https://www.amazon.com/Hemp-Calming-Chews-Dogs-Supplement/dp/B0F7NFXDV1?linkCode=ll2&tag=dogguidehub-20&linkId=9b83ecfa292911d509746677049b40f0&language=en_US&ref_=as_li_ss_tl",
+    price: "$26.99",
+    rating: 4.3,
+  },
+  {
+    title: "BARK&SPARK Advanced Calming Chews",
+    description: "Hemp oil and melatonin chews for fireworks, storms, and aggressive behavior relief, 90 chews.",
+    link: "https://www.amazon.com/Bark-Spark-Advanced-Calming-Treats/dp/B0F9Z4GKJL?linkCode=ll2&tag=dogguidehub-20&linkId=1d196ca953a6c44eb30f74fa474a487b&language=en_US&ref_=as_li_ss_tl",
+    price: "$15.97",
+    rating: 4.3,
+  },
+  {
+    title: "Purina Pro Plan Calming Care Supplement",
+    description: "Veterinary-formulated calming supplement to support stress management, 30 ct. boxes.",
+    link: "https://www.amazon.com/Purina-Plan-Veterinary-Supplements-Calming/dp/B0BGV8L7L2?linkCode=ll2&tag=dogguidehub-20&linkId=d3e1c83f81623d7523d35378597546b8&language=en_US&ref_=as_li_ss_tl",
+    price: "$33.99",
+    rating: 4.3,
+  },
+  {
+    title: "PETLIBRO Stainless Steel Pet Water Fountain",
+    description: "101 oz automatic water dispenser with adjustable flow and dual filters, also suitable for small dogs.",
+    link: "https://www.amazon.com/PETLIBRO-Stainless-Automatic-Dispenser-Adjustable/dp/B0GDCZCXMY?linkCode=ll2&tag=dogguidehub-20&linkId=4ef5ed7edec7484e3d2bb66176adb474&language=en_US&ref_=as_li_ss_tl",
+    price: "$37.99",
+    rating: 4.6,
+  },
+  {
+    title: "PetSafe Drinkwell Platinum Water Fountain",
+    description: "168 oz automatic drinking fountain for dogs and cats encouraging better hydration.",
+    link: "https://www.amazon.com/PetSafe-Drinkwell-Platinum-Fountain-Drinking/dp/B000L3XYZ4?linkCode=ll2&tag=dogguidehub-20&linkId=7854a2e5f9046193a3c53d7be433e16d&language=en_US&ref_=as_li_ss_tl",
+    price: "$42.74",
+    rating: 4.3,
+  },
+  {
+    title: "iProven Dog & Cat Thermometer",
+    description: "Fast 20-second readings with a comfortable, flexible, waterproof tip for accurate fever detection.",
+    link: "https://www.amazon.com/Digital-Medical-Pet-Thermometer-Animal-Dog/dp/B07BDFZCSV?linkCode=ll2&tag=dogguidehub-20&linkId=04f912fe06b45caa8b292df9dcda91f0&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.99",
+    rating: 4.5,
+  },
+  {
+    title: "HomeoPet Cough Supplement",
+    description: "Safe, natural liquid cough supplement for dogs, cats, and small pets, 15 mL.",
+    link: "https://www.amazon.com/HomeoPet-14706-Cough-15-ml/dp/B000Y1MS5K?linkCode=ll2&tag=dogguidehub-20&linkId=5cc6398016d1ab10c7c18fecdafabaf4&language=en_US&ref_=as_li_ss_tl",
+    price: "$19.49",
+    rating: 4.2,
+  },
+  {
+    title: "Greenies Dental Dog Treats",
+    description: "Vet-recommended natural dental chews for adult dogs, original flavor, 36 count.",
+    link: "https://www.amazon.com/GREENIES-Original-Regular-Natural-Dental/dp/B006W6YHHI?linkCode=ll2&tag=dogguidehub-20&linkId=33f47c256d1b5962f8a8735e2d1dfc3b&language=en_US&ref_=as_li_ss_tl",
+    price: "$39.96",
+    rating: 4.8,
+    badge: "Best Dental Chew",
+  },
+  {
+    title: "Pedigree Dentastix Variety Pack",
+    description: "Original, beef & fresh flavors for daily dental cleaning, 51 treats total.",
+    link: "https://www.amazon.com/PEDIGREE-DENTASTIX-Original-Variety-lb-Pack/dp/B00CU2CMOI?linkCode=ll2&tag=dogguidehub-20&linkId=5a1b5943ba7c829569737172a45aab89&language=en_US&ref_=as_li_ss_tl",
+    price: "$23.98",
+    rating: 4.8,
+  },
+  {
+    title: "Purina DentaLife Daily Dental Chews",
+    description: "Daily dental chews made in USA facilities for large dogs, 18 ct. pouch.",
+    link: "https://www.amazon.com/Purina-Dentalife-Daily-Large-Treats/dp/B0186R3OUG?linkCode=ll2&tag=dogguidehub-20&linkId=75df332689ecddb58195a7fa0eafeed8&language=en_US&ref_=as_li_ss_tl",
+    price: "$7.87",
+    rating: 4.7,
+  },
+];
+
+const visibleProducts = products.slice(0, 6);
+const extraProducts = products.slice(6);
 ---
 <Base
   title="Dog Health Guides"
@@ -22,7 +237,47 @@ const healthArticles = allArticles
     ctaLink="#health-topics"
   />
 
-  <section class="section" id="health-topics">
+  <section class="section" id="recommended-products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Recommended Health Products</h2>
+        <p>Vet-favored supplements, ear care, parasite prevention, and more.</p>
+      </div>
+
+      <div class="grid grid-3" id="product-grid">
+        {visibleProducts.map((p) => (
+          <ProductBox
+            title={p.title}
+            description={p.description}
+            link={p.link}
+            rating={p.rating}
+            price={p.price}
+            badge={p.badge}
+          />
+        ))}
+        {extraProducts.map((p) => (
+          <div class="extra-product" style="display:none;">
+            <ProductBox
+              title={p.title}
+              description={p.description}
+              link={p.link}
+              rating={p.rating}
+              price={p.price}
+              badge={p.badge}
+            />
+          </div>
+        ))}
+      </div>
+
+      {extraProducts.length > 0 && (
+        <div class="show-more-wrap">
+          <button id="toggle-products" class="btn btn-primary">View All Products →</button>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="section alt-bg" id="health-topics">
     <div class="container">
       <div class="section-title">
         <h2>Health Articles</h2>
@@ -48,44 +303,31 @@ const healthArticles = allArticles
     </div>
   </section>
 
-  <section class="section alt-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Recommended Health Products</h2>
-      </div>
-      <div class="grid grid-3">
-        <ProductBox
-          title="Best Joint Supplement"
-          description="Vet-recommended glucosamine formula for mobility support."
-          link="#"
-          rating={4.7}
-          price="$29.99"
-        />
-        <ProductBox
-          title="Best Dental Chews"
-          description="Reduces plaque and freshens breath, vet-approved."
-          link="#"
-          rating={4.5}
-          price="$18.99"
-        />
-        <ProductBox
-          title="Best At-Home Health Monitor"
-          description="Track activity and vital signs to catch issues early."
-          link="#"
-          rating={4.4}
-          price="$79.99"
-        />
-      </div>
-    </div>
-  </section>
-
   <Newsletter
     title="Stay Ahead of Health Issues"
     subtitle="Weekly tips on prevention, symptoms, and vet-approved care."
   />
 </Base>
 
+<script>
+  const toggleBtn = document.getElementById("toggle-products");
+  const extras = document.querySelectorAll(".extra-product");
+  let expanded = false;
+
+  toggleBtn?.addEventListener("click", () => {
+    expanded = !expanded;
+    extras.forEach((el) => {
+      (el as HTMLElement).style.display = expanded ? "block" : "none";
+    });
+    toggleBtn.textContent = expanded ? "Show Less ↑" : "View All Products →";
+  });
+</script>
+
 <style>
   .alt-bg { background: var(--bg-soft); }
   .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+  .show-more-wrap {
+    text-align: center;
+    margin-top: 28px;
+  }
 </style>
