@@ -1,0 +1,197 @@
+// 关键词 → 标签 映射词典
+// 基于站内全部文章（Food / Health / Training / Breeds / Insurance）实际内容核对后整理。
+// 用于从文章的 title / excerpt / metaDescription 中扫描关键词，
+// 自动推断这篇文章跟商品池里哪些标签相关。
+//
+// 维护方式：以后写新文章时用到了新的SEO关键词模式，
+// 发现没有命中任何标签，就在这里补充一行映射即可（增量维护，不需要重新设计）。
+//
+// 已知数据缺口（关键词有映射，但商品池里暂无对应商品，匹配会退化成同池最高分兜底）：
+//   - 美容工具（电剪/针梳/吹水机/脱毛梳）→ 暂无 grooming 类商品
+//   - 减肥/体重管理专用狗粮 → food.ts 暂无 weight-management 标签商品
+//   - 护腰带/脊椎支具 → health.ts 暂无对应商品
+//   - GPS定位项圈 → training.ts 暂无对应商品
+//   - 防吠项圈 / 白噪音机 → health.ts、training.ts 暂无对应商品
+//   - 笼子（crate）本身 → training.ts 暂无笼子类商品
+// 以上缺口需要等对应联盟商品收集到后，按格式加入数据文件并打标签，匹配会自动变准。
+
+export const keywordTagMap: Record<string, string[]> = {
+  // ---- 年龄段 ----
+  "senior": ["senior"],
+  "aging": ["senior"],
+  "older dog": ["senior"],
+  "golden years": ["senior"],
+  "puppy": ["puppy"],
+  "puppies": ["puppy"],
+  "puppyhood": ["puppy"],
+
+  // ---- 体型 ----
+  "small breed": ["small-breed"],
+  "small dog": ["small-breed"],
+  "toy breed": ["small-breed"],
+  "large breed": ["large-breed"],
+  "big dog": ["large-breed"],
+  "giant breed": ["large-breed"],
+
+  // ---- 体重管理 / 食品品类 ----
+  "weight management": ["weight-management"],
+  "weight loss": ["weight-management"],
+  "obesity": ["weight-management"],
+  "overweight": ["weight-management"],
+  "diet": ["weight-management"],
+  "grain-free": ["grain-free"],
+  "grain free": ["grain-free"],
+  "gluten-free": ["grain-free"],
+  "human-grade": ["human-grade", "fresh-food"],
+  "human grade": ["human-grade", "fresh-food"],
+  "fresh food": ["fresh-food"],
+  "fresh dog food": ["fresh-food"],
+  "homemade": ["fresh-food", "human-grade"],
+  "raw dog food": ["fresh-food"],
+  "raw diet": ["fresh-food"],
+  "kibble": ["kibble"],
+  "dry dog food": ["kibble"],
+  "dry food": ["kibble"],
+  "wet dog food": ["wet-food"],
+  "wet food": ["wet-food"],
+  "canned food": ["wet-food"],
+  "budget": ["budget"],
+  "affordable": ["budget"],
+  "cheap": ["budget"],
+  "ingredients": ["kibble"],
+  "ingredient": ["kibble"],
+
+  // ---- 过敏 / 敏感 ----
+  "allergy": ["allergy-friendly", "skin-coat"],
+  "allergies": ["allergy-friendly", "skin-coat"],
+  "allergic": ["allergy-friendly", "skin-coat"],
+  "sensitive stomach": ["digestive-health", "allergy-friendly"],
+  "sensitive skin": ["skin-coat", "allergy-friendly"],
+  "hydrolyzed": ["allergy-friendly"],
+  "novel protein": ["allergy-friendly"],
+
+  // ---- 健康/疾病相关 ----
+  "joint": ["joint"],
+  "arthritis": ["joint"],
+  "osteoarthritis": ["joint"],
+  "hip dysplasia": ["joint"],
+  "elbow dysplasia": ["joint"],
+  "mobility": ["joint"],
+  "luxating patella": ["joint"],
+  "ivdd": ["joint"],
+  "back problem": ["joint"],
+  "spinal": ["joint"],
+  "skin": ["skin-coat"],
+  "itch": ["skin-coat", "allergy-friendly"],
+  "itching": ["skin-coat", "allergy-friendly"],
+  "pruritus": ["skin-coat"],
+  "hot spot": ["skin-coat"],
+  "dermatitis": ["skin-coat"],
+  "coat": ["skin-coat"],
+  "shedding": ["skin-coat"],
+  "ear infection": ["ear-care"],
+  "ear cleaner": ["ear-care"],
+  "otitis": ["ear-care"],
+  "flea": ["flea-tick"],
+  "tick": ["flea-tick"],
+  "parasite": ["flea-tick"],
+  "mange": ["flea-tick"],
+  "calm": ["calming"],
+  "calming": ["calming"],
+  "anxiety": ["calming"],
+  "separation anxiety": ["calming"],
+  "stress": ["calming"],
+  "barking": ["calming"],
+  "noise aversion": ["calming"],
+  "digestive": ["digestive-health"],
+  "diarrhea": ["digestive-health"],
+  "vomiting": ["digestive-health"],
+  "vomit": ["digestive-health"],
+  "stomach": ["digestive-health"],
+  "gut health": ["digestive-health", "probiotic"],
+  "probiotic": ["probiotic", "digestive-health"],
+  "dental": ["dental"],
+  "teeth": ["dental"],
+  "breath": ["dental"],
+  "cough": ["cough-respiratory"],
+  "respiratory": ["cough-respiratory"],
+  "kennel cough": ["cough-respiratory"],
+  "boas": ["cough-respiratory"],
+  "brachycephalic": ["cough-respiratory"],
+  "hydration": ["hydration"],
+  "dehydration": ["hydration"],
+  "dehydrated": ["hydration"],
+  "water fountain": ["hydration"],
+  "fever": ["wellness-monitoring"],
+  "temperature": ["wellness-monitoring"],
+  "thermometer": ["wellness-monitoring"],
+
+  // ---- 训练相关 ----
+  "leash": ["leash"],
+  "leash training": ["leash", "no-pull"],
+  "pulling": ["leash", "no-pull"],
+  "pull": ["no-pull"],
+  "harness": ["harness"],
+  "clicker": ["clicker"],
+  "treat pouch": ["treat-pouch"],
+  "obedience": ["clicker", "treat-pouch"],
+  "potty": ["potty-training"],
+  "housetrain": ["potty-training"],
+  "house-training": ["potty-training"],
+  "house training": ["potty-training"],
+  "pee pad": ["potty-training"],
+  "crate train": ["potty-training"],
+  "crate": ["potty-training"],
+  "recall": ["recall"],
+  "come command": ["recall"],
+  "whistle": ["whistle"],
+  "chew": ["chew-toy"],
+  "chewing": ["chew-toy"],
+  "biting": ["chew-toy"],
+  "land shark": ["chew-toy"],
+  "teething": ["chew-toy"],
+  "puzzle toy": ["chew-toy"],
+  "enrichment": ["chew-toy"],
+  "medication": ["medication-aid"],
+  "pill": ["medication-aid"],
+  "socializ": ["harness", "treat-pouch"],
+  "reactiv": ["leash", "no-pull"],
+
+  // ---- 保险相关（暂无商品池数据，保留映射供以后insurance.ts填充后直接生效）----
+  "insurance": ["insurance"],
+  "accident-only": ["insurance"],
+  "wellness plan": ["insurance"],
+  "claims process": ["insurance"],
+  "deductible": ["insurance"],
+  "reimbursement": ["insurance"],
+};
+
+// 常见犬种 → 体型标签（覆盖目前文章里用到的品种名，
+// 以后新增品种相关文章时，在这里补充一行即可）
+export const breedSizeMap: Record<string, string> = {
+  beagle: "small-breed",
+  chihuahua: "small-breed",
+  pomeranian: "small-breed",
+  yorkie: "small-breed",
+  "yorkshire terrier": "small-breed",
+  dachshund: "small-breed",
+  pug: "small-breed",
+  "shih tzu": "small-breed",
+  maltese: "small-breed",
+  "french bulldog": "small-breed",
+  poodle: "small-breed",
+  "boston terrier": "small-breed",
+  "cavalier king charles": "small-breed",
+
+  "german shepherd": "large-breed",
+  labrador: "large-breed",
+  "golden retriever": "large-breed",
+  rottweiler: "large-breed",
+  "great dane": "large-breed",
+  doberman: "large-breed",
+  husky: "large-breed",
+  "siberian husky": "large-breed",
+  boxer: "large-breed",
+  mastiff: "large-breed",
+  "bernese mountain": "large-breed",
+};

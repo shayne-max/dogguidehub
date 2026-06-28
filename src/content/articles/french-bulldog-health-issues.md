@@ -7,23 +7,6 @@ date: 2026-06-22
 draft: false
 featured: false
 metaDescription: "Understand French Bulldog health issues in 2026, including BOAS, skin disorders, and spinal disease, with vet-backed prevention and care strategies."
-affiliateProducts:
-  - title: "PetLab Co. Joint Care Chews"
-    description: "Glucosamine HCl, green-lipped mussel, and omega-3 fatty acids to support cartilage and joint flexibility in a breed prone to IVDD and luxating patella."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$34.99"
-    rating: 4.6
-    badge: "Joint Support"
-  - title: "Vet-Approved Chlorhexidine Antiseptic Wipes"
-    description: "Frontline defense for cleaning facial wrinkles and tail pockets to prevent skin fold dermatitis, a near-constant issue for the breed."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$15.99"
-    rating: 4.5
-  - title: "Slow Feeder Bowl"
-    description: "Reduces gulping and aerophagia (swallowing air), which worsens gas, bloating, and reflux — a common issue in brachycephalic breeds."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$16.99"
-    rating: 4.6
 ---
 
 French Bulldogs have captured the hearts of millions, but their soaring popularity comes with a significant responsibility. This guide provides a comprehensive, veterinary-backed overview of the most pressing health issues affecting the breed in 2026, moving beyond simple lists to offer a deep dive into the "why" and "how" of proactive care.

@@ -7,23 +7,6 @@ date: 2026-06-22
 draft: false
 featured: false
 metaDescription: "Learn the real pug lifespan data for 2026 and the top health threats — BOAS, PDE, IVDD, and PLE — with vet-backed prevention strategies."
-affiliateProducts:
-  - title: "Ruffwear Front Range Harness"
-    description: "A step-in harness that distributes pressure across the chest instead of the throat, recommended over collars for brachycephalic breeds."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$44.99"
-    rating: 4.7
-    badge: "Vet Recommended"
-  - title: "Ruffwear Swamp Cooler Vest"
-    description: "A cooling vest that helps pugs regulate body temperature during walks, critical for a breed prone to overheating and heatstroke."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.5
-  - title: "Vet's Best Eye & Ear Wipes + Omega-3 Supplement"
-    description: "Daily hygiene wipes for facial folds and ears, paired with omega-3 fish oil to support skin health and reduce inflammation."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$19.99"
-    rating: 4.4
 ---
 
 **Short Summary:** While the average pug lifespan is often quoted as 10-14 years, these lovable companions face a unique set of inherited health challenges that can significantly affect their quality of life. This 2026 guide provides the latest veterinary insights into the leading causes of mortality in pugs, offering actionable advice to help your flat-faced friend live their healthiest, happiest life.

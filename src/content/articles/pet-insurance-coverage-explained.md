@@ -7,25 +7,6 @@ date: 2026-06-26
 draft: false
 featured: false
 metaDescription: "Understand pet insurance coverage in 2026 — plan types, deductibles, reimbursement rates, the claims process, and exclusions every dog owner should know."
-affiliateProducts:
-  - title: "Spot Pet Insurance"
-    description: "Highly customizable coverage with unlimited annual limit options and up to a 90% reimbursement rate for maximum financial protection."
-    link: "https://www.spotpetins.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.6
-    badge: "Best for Unlimited Coverage"
-  - title: "ASPCA Pet Health Insurance"
-    description: "A trusted name with flexible accident-only and accident-and-illness plans, plus a 180-day curable pre-existing condition policy."
-    link: "https://www.aspcapetinsurance.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.6
-    badge: "Best Overall Value"
-  - title: "Embrace Pet Insurance"
-    description: "A standalone Wellness Rewards plan plus a Healthy Pet Discount that reduces your deductible by $50 for every claim-free year."
-    link: "https://www.embracepetinsurance.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.5
-    badge: "Best for Preventive Care"
 ---
 
 **Short Summary:** Pet insurance helps reimburse you for unexpected veterinary costs, but not all policies are the same. This guide explains the types of coverage available, how key policy features like deductibles and reimbursement rates work, and what to consider in 2026 to ensure your dog gets the best possible care without breaking the bank.

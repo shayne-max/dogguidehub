@@ -7,24 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Compare the best dry dog food brands for 2026 based on AAFCO standards, ingredient quality, and veterinary recommendations."
-affiliateProducts:
-  - title: "Purina Pro Plan Complete Essentials"
-    description: "Real turkey as the first ingredient, with probiotics for digestive health and AAFCO-balanced nutrition."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.8
-    badge: "Best Overall"
-  - title: "Wholesomes Sensitive Skin & Stomach"
-    description: "Meat-first recipe with easily digestible ancient grains, free of corn, wheat, and soy — a budget-friendly sensitive stomach option."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$28.99"
-    rating: 4.5
-    badge: "Best Value"
-  - title: "Royal Canin Size Health Nutrition"
-    description: "Breed-size specific kibble shape and nutrient profile tailored to your dog's unique body structure."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$58.99"
-    rating: 4.6
 ---
 
 Choosing the right dry dog food can feel overwhelming. With aisles of colorful bags, labels screaming "premium," "holistic," and "natural," and ever-changing trends, it's easy to feel lost. The reality is, a shiny bag and clever marketing don't guarantee a nutritious meal for your dog. In 2026, the choice is no longer just about what's popular but about understanding the science and standards behind the food. This guide cuts through the noise, providing a veterinarian-style perspective on what truly constitutes the best dry dog food and which brands consistently meet the highest standards.

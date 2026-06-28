@@ -7,23 +7,6 @@ date: 2026-06-24
 draft: false
 featured: false
 metaDescription: "Learn the science-backed basics of dog obedience training in 2026, including positive reinforcement, the five core commands, and the right tools."
-affiliateProducts:
-  - title: "Freeze-Dried Liver Training Treats"
-    description: "High-value, single-ingredient treats that are small and soft enough to chew quickly, keeping training sessions moving."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$14.99"
-    rating: 4.7
-    badge: "Best Motivator"
-  - title: "Front-Clip No-Pull Harness"
-    description: "Gently turns the dog's body when they pull, protecting the trachea while giving you better control during training walks."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$26.99"
-    rating: 4.6
-  - title: "Training Clicker"
-    description: "A precise marker tool that pinpoints the exact moment of a correct behavior, speeding up the learning process."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$7.99"
-    rating: 4.5
 ---
 
 **Short Summary:** Dog obedience training is the cornerstone of a harmonious relationship, transforming your pet into a confident and well-mannered companion. This guide covers the science-backed basics of positive reinforcement, offering actionable steps, product recommendations, and expert insights tailored for US dog owners in 2026.

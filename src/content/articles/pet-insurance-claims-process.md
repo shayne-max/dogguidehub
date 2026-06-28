@@ -7,25 +7,6 @@ date: 2026-06-26
 draft: false
 featured: false
 metaDescription: "Learn how the pet insurance claims process works in 2026, including required documents, processing times, and new AI-instant and direct-pay options."
-affiliateProducts:
-  - title: "Lemonade Pet Insurance"
-    description: "AI-powered claims processing that can approve simple claims instantly, with a fast, app-based submission process."
-    link: "https://www.lemonade.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.6
-    badge: "Fastest Claims"
-  - title: "ASPCA Pet Health Insurance"
-    description: "A 30-day money-back guarantee and a rare policy covering cured pre-existing conditions after 180 symptom-free days."
-    link: "https://www.aspcapetinsurance.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.6
-    badge: "Best for Multi-Pet Households"
-  - title: "Trupanion"
-    description: "Direct-pay technology settles eligible vet bills at checkout, removing the need to front large sums for emergency surgery."
-    link: "https://www.trupanion.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.5
-    badge: "Best for No Upfront Cash"
 ---
 
 **Short Summary:** Filing a pet insurance claim doesn't have to be stressful. Most US pet insurance is reimbursement-based — you pay your vet upfront, submit the invoice, and get a percentage back (typically 70-90%). This guide covers the entire claims process, common mistakes that delay payment, and what's new in 2026, including direct-pay options and "smart" claim approvals.

@@ -8,6 +8,7 @@ export const foodProducts: Product[] = [
     price: "$51.99",
     rating: 4.8,
     badge: "Best for Seniors",
+    tags: ["senior", "small-breed", "kibble"],
   },
   {
     title: "IAMS Proactive Health Small Breed Adult",
@@ -16,6 +17,7 @@ export const foodProducts: Product[] = [
     price: "$10.97",
     rating: 4.8,
     badge: "Best Budget",
+    tags: ["adult", "small-breed", "kibble", "budget"],
   },
   {
     title: "A Better Treat Allergy-Friendly Duck Formula",
@@ -23,6 +25,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Better-Treat-Friendly-Ingredients-Soothing/dp/B0F85ZS1CJ?linkCode=ll2&tag=dogguidehub-20&linkId=291bdfa4d7629e238b917d0aadf2cd36&language=en_US&ref_=as_li_ss_tl",
     price: "$24.99",
     rating: 4.5,
+    tags: ["allergy-friendly", "grain-free", "kibble"],
   },
   {
     title: "Cesar Small Breed Adult Dry Dog Food",
@@ -30,6 +33,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Cesar-Mignon-Flavor-Vegetables-Garnish/dp/B0D7VQ79V1?linkCode=ll2&tag=dogguidehub-20&linkId=f470a60d05fcefd6b29714cd93259eda&language=en_US&ref_=as_li_ss_tl",
     price: "$37.96",
     rating: 4.7,
+    tags: ["adult", "small-breed", "kibble"],
   },
   {
     title: "Hill's Science Diet Adult 1-6 Small & Mini",
@@ -38,6 +42,7 @@ export const foodProducts: Product[] = [
     price: "$95.96",
     rating: 4.8,
     badge: "Editor's Pick",
+    tags: ["adult", "small-breed", "kibble"],
   },
   {
     title: "Beneful IncrediBites Wet Food Variety Pack",
@@ -45,6 +50,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Beneful-Purina-Variety-IncrediBites-Chicken/dp/B0GHD96L2T?linkCode=ll2&tag=dogguidehub-20&linkId=7dd4be331195711fd4c43c647d731e93&language=en_US&ref_=as_li_ss_tl",
     price: "$55.68",
     rating: 4.7,
+    tags: ["wet-food", "adult"],
   },
   {
     title: "Purina ONE Chicken and Rice Formula",
@@ -52,6 +58,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Purina-Smartblend-Natural-Chicken-Formula/dp/B008MKI7KU?linkCode=ll2&tag=dogguidehub-20&linkId=28853b3694561687ed29c0905b822b38&language=en_US&ref_=as_li_ss_tl",
     price: "$40.00",
     rating: 4.6,
+    tags: ["adult", "kibble", "budget"],
   },
   {
     title: "Purina ONE Plus Digestive Health Formula",
@@ -59,6 +66,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Purina-ONE-Probiotics-Smartblend-Digestive/dp/B07QHKQMPH?linkCode=ll2&tag=dogguidehub-20&linkId=d6fa732a4921647767a0e464d9367048&language=en_US&ref_=as_li_ss_tl",
     price: "$31.58",
     rating: 4.6,
+    tags: ["digestive-health", "kibble", "adult"],
   },
   {
     title: "Pedigree Complete Nutrition Roasted Chicken",
@@ -66,6 +74,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Pedigree-Complete-Nutrition-Roasted-Vegetable/dp/B0D7VR2MMQ?linkCode=ll2&tag=dogguidehub-20&linkId=d0d98f1cc30a52d4dd8261558b296cff&language=en_US&ref_=as_li_ss_tl",
     price: "$25.92",
     rating: 4.8,
+    tags: ["adult", "kibble", "budget"],
   },
   {
     title: "VICTOR Super Premium Beef Meal & Brown Rice",
@@ -73,6 +82,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Victor-Beef-Brown-Formula-Food/dp/B00COVPV9S?linkCode=ll2&tag=dogguidehub-20&linkId=7999f9be487fd4fc3cd2bb0b1682ee9f&language=en_US&ref_=as_li_ss_tl",
     price: "$50.99",
     rating: 4.6,
+    tags: ["adult", "kibble", "grain-free"],
   },
   {
     title: "The Honest Kitchen Dehydrated Whole Grain",
@@ -81,6 +91,7 @@ export const foodProducts: Product[] = [
     price: "$76.99",
     rating: 4.5,
     badge: "Human-Grade",
+    tags: ["human-grade", "dehydrated", "adult"],
   },
   {
     title: "VICTOR Super Premium Ocean Fish Formula",
@@ -88,6 +99,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Victor-Ocean-Fish-Formula-Food/dp/B01IAV03CA?linkCode=ll2&tag=dogguidehub-20&linkId=f0a7822e9abf8f84367e84cbb216e10a&language=en_US&ref_=as_li_ss_tl",
     price: "$34.99",
     rating: 4.6,
+    tags: ["kibble", "grain-free", "skin-coat"],
   },
   {
     title: "VICTOR Purpose Hero Canine Kibble",
@@ -95,6 +107,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Victor-Super-Premium-Dog-Food/dp/B00B1U7F10?linkCode=ll2&tag=dogguidehub-20&linkId=bff6ad66159c75935b5c97f6feec2805&language=en_US&ref_=as_li_ss_tl",
     price: "$70.29",
     rating: 4.5,
+    tags: ["joint", "kibble", "large-breed"],
   },
   {
     title: "Blue Buffalo Nudges Chicken Jerky Cuts",
@@ -102,6 +115,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Buffalo-Nudges-Jerky-Natural-Treats/dp/B0BCXBDSBC?linkCode=ll2&tag=dogguidehub-20&linkId=770948c147f9ea04df3267502059b691&language=en_US&ref_=as_li_ss_tl",
     price: "$20.99",
     rating: 4.8,
+    tags: ["treats"],
   },
   {
     title: "Cesar Loaf in Sauce Wet Food Variety Pack",
@@ -109,6 +123,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Cesar-Rotisserie-Chicken-Flavors-Variety/dp/B0GH9Z73KP?linkCode=ll2&tag=dogguidehub-20&linkId=75d4df1f6d4c104532ef2e61d7150dd7&language=en_US&ref_=as_li_ss_tl",
     price: "$49.88",
     rating: 4.7,
+    tags: ["wet-food", "adult"],
   },
   {
     title: "Cesar Small Breed Dry Dog Food",
@@ -116,6 +131,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Cesar-Mignon-Flavor-Vegetables-Garnish/dp/B01MYW7B8N?linkCode=ll2&tag=dogguidehub-20&linkId=89350586740b53e0d0d42193419e5f0f&language=en_US&ref_=as_li_ss_tl",
     price: "$18.98",
     rating: 4.7,
+    tags: ["small-breed", "kibble", "adult"],
   },
   {
     title: "Purina ONE True Instinct Turkey & Venison",
@@ -123,6 +139,7 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/Purina-Smartblend-Instinct-Natural-Venison/dp/B01NA9TN3D?linkCode=ll2&tag=dogguidehub-20&linkId=87d7540ee7bf176c396358d8eefa900d&language=en_US&ref_=as_li_ss_tl",
     price: "$63.00",
     rating: 4.6,
+    tags: ["kibble", "adult", "large-breed"],
   },
   {
     title: "Pedigree Adult Grilled Steak & Vegetable",
@@ -130,5 +147,6 @@ export const foodProducts: Product[] = [
     link: "https://www.amazon.com/PEDIGREE-Complete-Nutrition-Grilled-Vegetable/dp/B09RPL4Z4J?linkCode=ll2&tag=dogguidehub-20&linkId=d58a2434e83a335d25935b8f34c0ab20&language=en_US&ref_=as_li_ss_tl",
     price: "$16.98",
     rating: 4.7,
+    tags: ["adult", "kibble", "budget"],
   },
 ];

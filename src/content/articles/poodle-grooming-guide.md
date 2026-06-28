@@ -7,24 +7,6 @@ date: 2026-06-22
 draft: false
 featured: false
 metaDescription: "Learn how to groom a Poodle in 2026 with this complete guide to brushing, bathing, trimming, and ear/nail care, plus top tool recommendations."
-affiliateProducts:
-  - title: "Oneisall Dog Clippers for Thick Coats"
-    description: "Highly rated for handling thick, curly Poodle coats without stalling, with low-noise operation and detachable blades for easy cleaning."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$45.99"
-    rating: 4.6
-    badge: "Best Clipper"
-  - title: "Saccison Slicker Brush & Comb Set"
-    description: "Extra-long, angled pins penetrate the curl to remove tangles, with a matching metal comb for the final tangle-free check."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$14.99"
-    rating: 4.5
-  - title: "Oneisall Dog Vacuum & Dryer 3-in-1"
-    description: "Vacuums, dries, and clips in one system, capturing loose hair and significantly reducing cleanup time for thick Poodle coats."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$89.99"
-    rating: 4.4
-    badge: "Best All-in-One"
 ---
 
 ## Summary

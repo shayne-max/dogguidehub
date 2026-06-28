@@ -4,6 +4,7 @@ import Base from "../../layouts/Base.astro";
 import ProductBox from "../../components/ProductBox.astro";
 import ArticleCard from "../../components/ArticleCard.astro";
 import Newsletter from "../../components/Newsletter.astro";
+import { matchProductsForArticle } from "../../utils/matchProducts";
 
 export const prerender = true;
 export async function getStaticPaths() {
@@ -24,7 +25,12 @@ interface Props {
 
 const { entry, allArticles } = Astro.props;
 const { Content } = await render(entry);
-const { title, excerpt, category, image, date, metaDescription, affiliateProducts } = entry.data;
+const { title, excerpt, category, image, date, metaDescription } = entry.data;
+
+// 自动匹配相关商品：不再读取文章手写的 affiliateProducts，
+// 而是根据文章标题/摘要/metaDescription 提取关键词，去对应商品池里匹配排序，取前3个。
+// Breeds / Gear 这两个没有专属商品池的分类，会自动混合检索 food + health + training。
+const recommendedProducts = matchProductsForArticle(category, title, excerpt, metaDescription);
 
 // 相关文章：同分类，排除自己，最多取3篇
 const related = allArticles
@@ -51,11 +57,11 @@ const related = allArticles
       <Content />
     </div>
 
-    {affiliateProducts && affiliateProducts.length > 0 && (
+    {recommendedProducts.length > 0 && (
       <section class="container product-section">
         <h2>Recommended Products</h2>
         <div class="grid grid-3">
-          {affiliateProducts.map((p) => (
+          {recommendedProducts.map((p) => (
             <ProductBox
               title={p.title}
               description={p.description}

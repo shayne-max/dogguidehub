@@ -7,24 +7,6 @@ date: 2026-06-22
 draft: false
 featured: false
 metaDescription: "Learn to recognize dog anxiety symptoms, the difference between separation and generalized anxiety, and the best training and supplement solutions for 2026."
-affiliateProducts:
-  - title: "Sunday Scaries FOMO Bones"
-    description: "Fast-acting calming chews ideal for situational triggers like thunderstorms, fireworks, or stressful car rides."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$24.99"
-    rating: 4.6
-    badge: "Best for Situational Anxiety"
-  - title: "Finn Calming Aid Soft Chews"
-    description: "NASC-certified daily supplement with L-tryptophan, L-theanine, and passionflower for general anxiety support."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$26.99"
-    rating: 4.5
-    badge: "Best Daily Driver"
-  - title: "Native Pet GutWell Stress Support"
-    description: "Vet-formulated probiotic and prebiotic blend that supports the gut-brain axis for anxiety linked to digestive health."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$29.99"
-    rating: 4.4
 ---
 
 ## Short Summary

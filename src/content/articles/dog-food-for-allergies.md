@@ -7,25 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Learn how to diagnose and manage dog food allergies in 2026, including the elimination diet process and the best hydrolyzed, novel-protein, and plant-based food options."
-affiliateProducts:
-  - title: "Royal Canin Ultamino"
-    description: "Veterinary-grade, ultra-hydrolyzed protein diet that supports the skin barrier — the diagnostic gold standard for severe allergies."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$89.99"
-    rating: 4.7
-    badge: "Best Overall"
-  - title: "Purina Pro Plan Sensitive Skin and Stomach"
-    description: "Salmon and rice formula rich in omega fatty acids, available without a prescription for mild-to-moderate sensitivities."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$48.99"
-    rating: 4.6
-    badge: "Best Value OTC"
-  - title: "Petaluma Adult Baked Recipe"
-    description: "Whole-food, plant-based recipe formulated by veterinary nutritionists that avoids beef, dairy, and chicken — the top three food allergens."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.5
-    badge: "Best Plant-Based"
 ---
 
 **Short Summary:** Does your dog suffer from constant itching, ear infections, or digestive upset? Food allergies could be the culprit. This comprehensive guide explains the science behind canine food allergies, outlines the gold-standard diagnostic process, and reviews the best dietary solutions for 2026, including breakthrough options like precision-fermented proteins.

@@ -8,6 +8,7 @@ export const trainingProducts: Product[] = [
     price: "$15.99",
     rating: 4.8,
     badge: "Top Rated",
+    tags: ["treat-pouch", "clicker"],
   },
   {
     title: "Greenies Pill Pockets for Dogs (Large)",
@@ -16,6 +17,7 @@ export const trainingProducts: Product[] = [
     price: "$17.89",
     rating: 4.8,
     badge: "Best for Medication",
+    tags: ["treats", "medication-aid", "large-breed"],
   },
   {
     title: "Fox 40 Classic Whistle (3-Pack)",
@@ -24,6 +26,7 @@ export const trainingProducts: Product[] = [
     price: "$24.99",
     rating: 4.8,
     badge: "Pro Choice",
+    tags: ["whistle", "recall"],
   },
   {
     title: "Dog Treat Pouch - 3 Ways to Wear",
@@ -31,6 +34,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Training-Walking-Shoulder-Dispenser-Clicker/dp/B07N2Q8414?linkCode=ll2&tag=dogguidehub-20&linkId=e0e7c3aa6b406c91f01401f9201fb4b1&language=en_US&ref_=as_li_ss_tl",
     price: "$12.99",
     rating: 4.7,
+    tags: ["treat-pouch", "clicker"],
   },
   {
     title: "Gobeigo Silicone 4-Cup Treat Pouch",
@@ -38,6 +42,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Gobeigo-Silicone-Training-Stronger-Magnetic/dp/B0D9XXYG5K?linkCode=ll2&tag=dogguidehub-20&linkId=7a8554535cd8bd828d71ad7f662fea23&language=en_US&ref_=as_li_ss_tl",
     price: "$20.99",
     rating: 4.7,
+    tags: ["treat-pouch", "clicker"],
   },
   {
     title: "KONG Classic Stuffable Dog Toy",
@@ -46,6 +51,7 @@ export const trainingProducts: Product[] = [
     price: "$13.96",
     rating: 4.6,
     badge: "Best Seller",
+    tags: ["chew-toy"],
   },
   {
     title: "tobeDRI No-Pull Dog Harness with Free Leash",
@@ -53,6 +59,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/tobeDRI-Harness-Adjustable-Reflective-Control/dp/B086PCQ3HQ?linkCode=ll2&tag=dogguidehub-20&linkId=5debbd216a4eb705a669139507868bf9&language=en_US&ref_=as_li_ss_tl",
     price: "$19.99",
     rating: 4.6,
+    tags: ["harness", "no-pull", "leash"],
   },
   {
     title: "Best Pet Supplies Voyager Step-in Air Harness",
@@ -60,6 +67,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Best-Pet-Supplies-Voyager-Harness/dp/B0FH8HTDYQ?linkCode=ll2&tag=dogguidehub-20&linkId=161c482515a19021ecb12f72008c9d21&language=en_US&ref_=as_li_ss_tl",
     price: "$12.28",
     rating: 4.6,
+    tags: ["harness", "no-pull"],
   },
   {
     title: "Hipat Sports Whistle (2-Pack)",
@@ -67,6 +75,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Hipat-Whistle-Whistles-Referees-Officials/dp/B07QWRP934?linkCode=ll2&tag=dogguidehub-20&linkId=2ff6c7736c65ab3566542307e78c9489&language=en_US&ref_=as_li_ss_tl",
     price: "$5.99",
     rating: 4.6,
+    tags: ["whistle", "recall"],
   },
   {
     title: "BLUETREE Dog Doorbells",
@@ -74,6 +83,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/BLUETREE-Doorbells-Premium-Training-Adjustable/dp/B097BQYZC5?linkCode=ll2&tag=dogguidehub-20&linkId=0f8b975c8a8d6f5f383022b12d95b62a&language=en_US&ref_=as_li_ss_tl",
     price: "$6.99",
     rating: 4.6,
+    tags: ["potty-training"],
   },
   {
     title: "TagME 6ft Slip Dog Lead",
@@ -81,6 +91,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/TagME-Reflective-Training-Walking-Climbing/dp/B095775SWX?linkCode=ll2&tag=dogguidehub-20&linkId=326afa090ece88fb3c8bcba2e4a50d60&language=en_US&ref_=as_li_ss_tl",
     price: "$8.99",
     rating: 4.6,
+    tags: ["leash", "no-pull"],
   },
   {
     title: "Wellbro Real Leather Slip Lead",
@@ -88,6 +99,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Wellbro-Rolled-Leather-Adjustable-Training/dp/B07VPGPK7F?linkCode=ll2&tag=dogguidehub-20&linkId=499a5bba396dd4ff1e9340f755314ba0&language=en_US&ref_=as_li_ss_tl",
     price: "$17.99",
     rating: 4.6,
+    tags: ["leash", "no-pull", "large-breed"],
   },
   {
     title: "lynxking Check Cord Long Training Lead",
@@ -95,6 +107,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/lynxking-Training-Tracking-Medium-Orange/dp/B07VJ8FYCD?linkCode=ll2&tag=dogguidehub-20&linkId=9463c962546f5504a8ce339057539def&language=en_US&ref_=as_li_ss_tl",
     price: "$18.49",
     rating: 4.6,
+    tags: ["leash", "recall"],
   },
   {
     title: "NTR 30 FT Dog Leash",
@@ -102,6 +115,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/NTR-Obedience-Training-Reflective-Dogs-Black/dp/B0C2GHMGVB?linkCode=ll2&tag=dogguidehub-20&linkId=c9acfc47cb6c685e29df6c3c1fef32b6&language=en_US&ref_=as_li_ss_tl",
     price: "$15.69",
     rating: 4.6,
+    tags: ["leash", "recall"],
   },
   {
     title: "KONG Extreme Dog Toy (2-Pack)",
@@ -109,6 +123,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/KONG-Extreme-Dental-Chew-Large/dp/B00SVEMNU2?linkCode=ll2&tag=dogguidehub-20&linkId=66c0184f966de4da9e43e8dd886f5147&language=en_US&ref_=as_li_ss_tl",
     price: "$27.01",
     rating: 4.6,
+    tags: ["chew-toy", "large-breed"],
   },
   {
     title: "heouvo Treat Pouch with Training Clicker",
@@ -116,6 +131,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/heouvo-Training-Stronger-Magnetic-Spilling/dp/B0CQQF67P1?linkCode=ll2&tag=dogguidehub-20&linkId=f01007e3ba07d417a2f3a5cbf2fdb2a9&language=en_US&ref_=as_li_ss_tl",
     price: "$9.99",
     rating: 4.6,
+    tags: ["treat-pouch", "clicker"],
   },
   {
     title: "rabbitgoo No-Pull Dog Harness",
@@ -123,6 +139,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Rabbitgoo-Harness-Adjustable-Reflective-Material/dp/B01M8JT6FT?linkCode=ll2&tag=dogguidehub-20&linkId=12243b2747f74e8b5f5293c54fb6dbb9&language=en_US&ref_=as_li_ss_tl",
     price: "$20.98",
     rating: 4.5,
+    tags: ["harness", "no-pull", "large-breed"],
   },
   {
     title: "PHOEPET No-Pull Harness (Orange)",
@@ -130,6 +147,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/PHOEPET-Harness-Reflective-Adjustable-Buckles/dp/B07GVCFQV6?linkCode=ll2&tag=dogguidehub-20&linkId=c7881cdf461b7ad50776eb8676a265a2&language=en_US&ref_=as_li_ss_tl",
     price: "$15.83",
     rating: 4.5,
+    tags: ["harness", "no-pull"],
   },
   {
     title: "rabbitgoo No-Pull Harness for Large Dogs",
@@ -137,6 +155,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/rabbitgoo-Harness-Buckles-Adjustable-Reflective/dp/B0CQX3XCPK?linkCode=ll2&tag=dogguidehub-20&linkId=a5ccce0938c9ebcc3b669c87c65acfb8&language=en_US&ref_=as_li_ss_tl",
     price: "$18.98",
     rating: 4.5,
+    tags: ["harness", "no-pull", "large-breed"],
   },
   {
     title: "PHOEPET No-Pull Harness (Grey)",
@@ -144,6 +163,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/PHOEPET-Harness-Reflective-Adjustable-Buckles/dp/B07M768YMD?linkCode=ll2&tag=dogguidehub-20&linkId=b0ce079d74d1697710d1dc5e77f5ae71&language=en_US&ref_=as_li_ss_tl",
     price: "$13.97",
     rating: 4.5,
+    tags: ["harness", "no-pull"],
   },
   {
     title: "COCOYO Puppy Training Pads (30 ct)",
@@ -151,6 +171,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/U-play-Best-Value-Training-Pads/dp/B07L72ST5Q?linkCode=ll2&tag=dogguidehub-20&linkId=b9e057c59acaf4dd714e562a93ce27b1&language=en_US&ref_=as_li_ss_tl",
     price: "$7.33",
     rating: 4.5,
+    tags: ["potty-training", "puppy"],
   },
   {
     title: "Amazon Basics Leak-Proof Pee Pads (150 ct)",
@@ -158,6 +179,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Amazon-Basics-Leak-Proof-Quick-Dry-Absorbency/dp/B00MW8G6OC?linkCode=ll2&tag=dogguidehub-20&linkId=749c1779206ab3467adc010869721903&language=en_US&ref_=as_li_ss_tl",
     price: "$28.49",
     rating: 4.5,
+    tags: ["potty-training", "puppy"],
   },
   {
     title: "Honey Care All-Absorb Training Pads (120 ct)",
@@ -165,6 +187,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/All-Absorb-Count-Training-23-5-Inch-White/dp/B00ODRO7W8?linkCode=ll2&tag=dogguidehub-20&linkId=69f4d8767d7e7e7b328949b38305b729&language=en_US&ref_=as_li_ss_tl",
     price: "$19.98",
     rating: 4.5,
+    tags: ["potty-training", "puppy"],
   },
   {
     title: "American Kennel Club Scented Training Pads (50 ct)",
@@ -172,6 +195,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Ultra-Absorbent-Control-Training-Leak-proof/dp/B00PG3HBGM?linkCode=ll2&tag=dogguidehub-20&linkId=30f689f79bd8c5e76840927fcda59c69&language=en_US&ref_=as_li_ss_tl",
     price: "$18.36",
     rating: 4.5,
+    tags: ["potty-training", "puppy"],
   },
   {
     title: "Fida Durable Slip Lead",
@@ -179,6 +203,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Fida-Durable-Comfortable-Training-Reflective/dp/B08Y5Z3J61?linkCode=ll2&tag=dogguidehub-20&linkId=df5fc347b9566616957378a252e023b7&language=en_US&ref_=as_li_ss_tl",
     price: "$13.99",
     rating: 4.5,
+    tags: ["leash", "no-pull"],
   },
   {
     title: "lynxking Strong Braided Slip Lead",
@@ -186,6 +211,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/lynxking-Strong-Training-Leashes-Medium/dp/B07D7V2G1J?linkCode=ll2&tag=dogguidehub-20&linkId=a27f84c3fabcff213854fecbfc52e783&language=en_US&ref_=as_li_ss_tl",
     price: "$9.99",
     rating: 4.5,
+    tags: ["leash", "no-pull"],
   },
   {
     title: "lynxking Reflective Slip Lead",
@@ -193,6 +219,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/lynxking-Reflective-Comfortable-Training-6ft-Slip/dp/B0DF6LHQZ6?linkCode=ll2&tag=dogguidehub-20&linkId=823e5d15aea6c86bb4e7a0257a7f2ecd&language=en_US&ref_=as_li_ss_tl",
     price: "$13.99",
     rating: 4.5,
+    tags: ["leash", "no-pull"],
   },
   {
     title: "Hi Kiss Obedience Recall Training Lead",
@@ -200,6 +227,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Hi-Kiss-Obedience-Training-Agility/dp/B071JV6J5J?linkCode=ll2&tag=dogguidehub-20&linkId=f881ac7dee6648fb1c743b6fc23cb29c&language=en_US&ref_=as_li_ss_tl",
     price: "$9.97",
     rating: 4.5,
+    tags: ["leash", "recall"],
   },
   {
     title: "Long Dog Leash with Reflective Threads",
@@ -207,6 +235,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Training-Reflective-Threads-Recall-Agility/dp/B0948DF2JL?linkCode=ll2&tag=dogguidehub-20&linkId=7a560c1a677a665cd62e51b57cd7ce2d&language=en_US&ref_=as_li_ss_tl",
     price: "$15.99",
     rating: 4.5,
+    tags: ["leash", "recall"],
   },
   {
     title: "AmaGood Long Leash for Puppy Training",
@@ -214,6 +243,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/AmaGood-Puppy-Leashes-Leads-Training/dp/B07SZNNCQK?linkCode=ll2&tag=dogguidehub-20&linkId=0431834dd4fa0b827b7240f3b4b9b790&language=en_US&ref_=as_li_ss_tl",
     price: "$9.49",
     rating: 4.5,
+    tags: ["leash", "recall", "puppy"],
   },
   {
     title: "KONG Ring Chew Toy",
@@ -221,6 +251,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/KONG-KM1-Ring-Med-Large/dp/B073SZ6NT8?linkCode=ll2&tag=dogguidehub-20&linkId=5c07729c8684e8d9352e295219a194a8&language=en_US&ref_=as_li_ss_tl",
     price: "$9.96",
     rating: 4.5,
+    tags: ["chew-toy", "dental"],
   },
   {
     title: "KONG Jumbler Ball",
@@ -228,6 +259,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/KONG-Jumbler-Medium-Large-colors/dp/B00KNWYFVK?linkCode=ll2&tag=dogguidehub-20&linkId=4b78274505a63e2e053c45af9edccce4&language=en_US&ref_=as_li_ss_tl",
     price: "$16.96",
     rating: 4.5,
+    tags: ["chew-toy"],
   },
   {
     title: "KONG Goodie Bone",
@@ -235,6 +267,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/KONG-10011-Goodie-Bone-Medium/dp/B0002AQPA2?linkCode=ll2&tag=dogguidehub-20&linkId=ba0e2e500b80cc38addc9430300e4eac&language=en_US&ref_=as_li_ss_tl",
     price: "$11.96",
     rating: 4.5,
+    tags: ["chew-toy"],
   },
   {
     title: "Ruconla Training Clicker Set (4-Pack)",
@@ -242,6 +275,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Ruconla-Training-Clicker-Wrist-Strap/dp/B07GLS5M96?linkCode=ll2&tag=dogguidehub-20&linkId=6d8ee472f2008784ba74c04dd33d145b&language=en_US&ref_=as_li_ss_tl",
     price: "$8.99",
     rating: 4.4,
+    tags: ["clicker", "budget"],
   },
   {
     title: "Disposable Training Underpads (100 ct)",
@@ -249,6 +283,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Absorbency-Disposable-Underpads-Leakproof-Training/dp/B0CPPLLBHT?linkCode=ll2&tag=dogguidehub-20&linkId=98d8905ccc323f129342355a5f969f75&language=en_US&ref_=as_li_ss_tl",
     price: "$27.99",
     rating: 4.4,
+    tags: ["potty-training", "puppy"],
   },
   {
     title: "KONG Flyer Rubber Disc",
@@ -256,6 +291,7 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Kong-Rubber-Flyer-Large-Red/dp/B000BRTADK?linkCode=ll2&tag=dogguidehub-20&linkId=7eabb3acb8c4e82eb6c6eb99b6231569&language=en_US&ref_=as_li_ss_tl",
     price: "$13.96",
     rating: 4.4,
+    tags: ["chew-toy"],
   },
   {
     title: "Dog Training Clicker with Wrist Strap",
@@ -263,5 +299,6 @@ export const trainingProducts: Product[] = [
     link: "https://www.amazon.com/Pet-Training-Clicker-Wrist-Strap/dp/B07F6FTTM7?linkCode=ll2&tag=dogguidehub-20&linkId=678ffa5dc8436b7e83b9557e956ddec8&language=en_US&ref_=as_li_ss_tl",
     price: "$4.99",
     rating: 4.3,
+    tags: ["clicker", "budget"],
   },
 ];

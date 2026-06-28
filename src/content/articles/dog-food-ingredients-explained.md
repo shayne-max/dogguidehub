@@ -7,25 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Learn how to decode dog food ingredient labels in 2026, including proteins, fats, by-products, and the AAFCO statement, with vet-informed buying tips."
-affiliateProducts:
-  - title: "Purina Pro Plan Complete Essentials"
-    description: "Named chicken meal as the first ingredient for concentrated protein, with probiotics and natural vitamin E preservation."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.7
-    badge: "Best High-Protein Kibble"
-  - title: "The Farmer's Dog Fresh Food"
-    description: "Human-grade, gently cooked recipes that preserve nutrient integrity better than high-heat extruded kibble, AAFCO-compliant."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$60/week"
-    rating: 4.8
-    badge: "Best Fresh Alternative"
-  - title: "Natural Balance L.I.D. Limited Ingredient Diet"
-    description: "Single novel protein and single carbohydrate source, ideal for elimination diets and dogs with suspected food sensitivities."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$42.99"
-    rating: 4.5
-    badge: "Best for Sensitivities"
 ---
 
 **Short Summary:** Choosing the right dog food starts with understanding the label. This guide explains the function of proteins, fats, and carbohydrates, decodes confusing terms like "by-products" and "meal," and offers expert-backed advice for navigating the pet food aisle in 2026 to ensure your dog gets optimal nutrition.

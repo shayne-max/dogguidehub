@@ -7,25 +7,6 @@ date: 2026-06-26
 draft: false
 featured: false
 metaDescription: "Compare the top pet insurance companies for 2026, including Trupanion's direct-pay, ASPCA's flexibility, and Lemonade's fast digital claims process."
-affiliateProducts:
-  - title: "ASPCA Pet Health Insurance"
-    description: "The perfect balance of comprehensive coverage, affordability, and customization, with no age limit for enrollment and coverage for cured conditions."
-    link: "https://www.aspcapetinsurance.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.7
-    badge: "Best Overall & Most Trusted"
-  - title: "Trupanion"
-    description: "Direct-pay technology settles the vet bill at checkout, with a per-condition deductible ideal for managing chronic, lifelong conditions."
-    link: "https://www.trupanion.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.6
-    badge: "Best for Chronic Conditions"
-  - title: "Lemonade Pet Insurance"
-    description: "AI-driven claims processing in seconds via a sleek mobile app, with competitive premiums and flexible plans."
-    link: "https://www.lemonade.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.5
-    badge: "Best for Speed & Digital Convenience"
 ---
 
 **Short Summary:** Choosing the right pet insurance is a critical healthcare decision that can save your dog's life and your finances. This guide provides a veterinarian-informed analysis of the top pet insurance companies in 2026, comparing coverage, costs, and unique features to help you make the best choice for your canine companion.

@@ -7,24 +7,6 @@ date: 2026-06-24
 draft: false
 featured: false
 metaDescription: "Learn how to fix dog separation anxiety in 2026 with a vet-informed plan combining graduated departures, safe haven training, and new medication options."
-affiliateProducts:
-  - title: "Sunday Scaries FOMO Bones"
-    description: "Soft chews with CBD isolate, passionflower, L-tryptophan, valerian root, and chamomile, designed to promote calm without sedation."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$24.99"
-    rating: 4.6
-    badge: "Best for Daily Calm"
-  - title: "Dyne Calming Soft Chews"
-    description: "A non-CBD vet-formulated blend with KSM-66 ashwagandha and a probiotic to support the gut-brain axis during stress."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$26.99"
-    rating: 4.5
-    badge: "Best Non-CBD Option"
-  - title: "Calm + Balmy Herbal Calming Spray"
-    description: "Lavender hydrosol with valerian, passionflower, hops, and oat seed — spray on bedding or a crate to build a calming safe haven."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$18.99"
-    rating: 4.4
 ---
 
 **Short Summary:** Dog separation anxiety is a common yet distressing behavioral disorder, but it is highly treatable with the right approach. This guide provides a comprehensive, veterinarian-informed plan for 2026, integrating proven behavior modification with the latest advancements in treatment, including the newly FDA-approved medication tasipimidine, to help your dog feel safe and secure when left alone.

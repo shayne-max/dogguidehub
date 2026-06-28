@@ -7,24 +7,6 @@ date: 2026-06-26
 draft: false
 featured: false
 metaDescription: "Is pet insurance worth it for an old dog in 2026? Compare providers with no upper age limit and learn how to avoid the pre-existing condition trap."
-affiliateProducts:
-  - title: "Pets Best Insurance"
-    description: "No upper age limit for enrollment, with coverage for curable pre-existing conditions after 12 symptom-free months and direct vet payment options."
-    link: "https://www.petsbest.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.6
-    badge: "Best for Complicated Histories"
-  - title: "Spot Pet Insurance"
-    description: "No upper age limit and no per-incident limits — accepts even very old dogs that would be refused elsewhere."
-    link: "https://www.spotpetins.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.5
-    badge: "Best for Late Enrollment"
-  - title: "Figo Pet Insurance"
-    description: "No upper age limit, with coverage for prescription medications, alternative therapies, chronic conditions, and 24/7 live vet chat."
-    link: "https://www.figopetinsurance.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.4
 ---
 
 **Short Summary:** As veterinary costs soar and nearly half of dogs over 10 face cancer, pet insurance for senior dogs isn't just about managing premiums — it's about having the financial freedom to make treatment decisions based on love, not cost. This guide reveals 2026 insights into coverage, pre-existing condition traps, and the best policies for your aging companion.

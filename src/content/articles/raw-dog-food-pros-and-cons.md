@@ -7,23 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Weigh the pros and cons of raw dog food in 2026, including metabolic research, bacterial contamination risks, and the safest freeze-dried raw alternatives."
-affiliateProducts:
-  - title: "Stella & Chewy's Freeze-Dried Raw Dinner Patties"
-    description: "95% raw meat, organs, and bone, complete and balanced for all life stages, with no thawing or prep required."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$44.99"
-    rating: 4.7
-    badge: "Best Overall"
-  - title: "Vital Essentials Freeze-Dried Raw Mini Nibs"
-    description: "98% meat, organs, and bone in a kibble-like shape with 49% protein — scoop straight into the bowl with no handling raw meat."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$39.99"
-    rating: 4.6
-  - title: "We Feed Raw Frozen Patties"
-    description: "Simple meat, organ, and bone formula crafted by a PhD animal nutritionist using USDA human-grade meats, with free cold shipping."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$59.99"
-    rating: 4.5
 ---
 
 **Summary:** Raw dog food diets are increasingly popular, driven by a desire for "natural" nutrition and emerging research on metabolic benefits. However, significant health risks — including bacterial contamination and nutritional imbalances — remain major veterinary concerns. This comprehensive guide evaluates the science, compares raw to kibble, reviews the safest product formats for 2026, and offers actionable recommendations for US dog owners.

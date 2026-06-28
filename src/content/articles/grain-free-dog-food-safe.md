@@ -7,25 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Is grain-free dog food safe in 2026? Learn about the FDA's DCM investigation, the role of pea and lentil ingredients, and safer grain-inclusive alternatives."
-affiliateProducts:
-  - title: "Dr. Tim's Heirloom Ancient Grains"
-    description: "Formulated by a PhD canine nutritionist using ancient grains like millet and quinoa instead of legumes, with pollock and salmon protein."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$52.99"
-    rating: 4.7
-    badge: "Best Overall"
-  - title: "Farmina N&D Ancestral Grain Mini"
-    description: "Low-glycemic, legume-free formula for small breeds with 60% animal-based ingredients and organic spelt and oats."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$44.99"
-    rating: 4.6
-    badge: "Best for Small Breeds"
-  - title: "Evanger's Super Premium"
-    description: "Budget-friendly, AAFCO-compliant grain-inclusive formula with brown rice, oatmeal, and added probiotics."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$29.99"
-    rating: 4.4
-    badge: "Best Budget Buy"
 ---
 
 For years, grain-free dog food was touted as a superior, more "natural" choice for our canine companions. However, in the wake of an ongoing FDA investigation into a potential link between certain grain-free diets and a serious heart condition called Dilated Cardiomyopathy (DCM), many owners are left confused and concerned. This comprehensive guide cuts through the marketing hype to provide a balanced, evidence-based look at grain-free diets. We'll explore the science behind the controversy, explain why peas and lentils are under scrutiny, and help you make the safest nutritional choice for your dog in 2026.

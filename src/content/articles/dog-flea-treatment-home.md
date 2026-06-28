@@ -7,25 +7,6 @@ date: 2026-06-23
 draft: false
 featured: false
 metaDescription: "Learn how to treat dog fleas at home in 2026 with vet-approved strategies covering your pet, your house, and your yard, plus top product comparisons."
-affiliateProducts:
-  - title: "Revolution Topical (Prescription)"
-    description: "Broad-spectrum monthly topical protecting against fleas, heartworm, ticks, ear mites, and sarcoptic mange — kills over 98% of fleas within 36 hours."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.7
-    badge: "Best Broad-Spectrum"
-  - title: "Advantage II (OTC)"
-    description: "Kills adult fleas within 12 hours via contact and prevents eggs from hatching — a reliable, accessible option without a vet visit."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$32.99"
-    rating: 4.5
-    badge: "Best OTC"
-  - title: "Generic Nitenpyram Tablets"
-    description: "FDA-approved generic equivalent to Capstar that starts killing adult fleas within hours — ideal for emergency relief during a severe outbreak."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$18.99"
-    rating: 4.4
-    badge: "Best Emergency Relief"
 ---
 
 **Short Summary:** Discover the most effective, vet-approved strategies for treating dog fleas at home in 2026. This guide covers everything from identifying an infestation to comparing top treatments, breaking the flea life cycle, and leveraging the latest FDA-approved generic options to save money.

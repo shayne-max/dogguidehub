@@ -7,23 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Compare the best puppy food brands for 2026, including large vs small breed formulas, label-reading tips, and feeding schedules backed by veterinary guidance."
-affiliateProducts:
-  - title: "Purina Pro Plan Puppy"
-    description: "Vet-recommended formula with DHA for brain development and guaranteed live probiotics for digestive health."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.8
-    badge: "Editor's Pick"
-  - title: "Hill's Science Diet Puppy"
-    description: "Clinically proven antioxidants and balanced minerals for strong bones, brain, and immune development."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$49.99"
-    rating: 4.7
-  - title: "Royal Canin Size Health Nutrition Puppy"
-    description: "Breed-size specific formulas with tailored kibble shape and nutrient profiles for small, medium, and large breeds."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$58.99"
-    rating: 4.6
 ---
 
 Bringing a new puppy home is one of life's greatest joys. As you prepare for their arrival—choosing a crate, picking out toys, and puppy-proofing your home—one of the most critical decisions you'll make is what to feed them. The sheer volume of options available today can be overwhelming. This guide, grounded in the latest veterinary consensus and a 2026 perspective on pet nutrition, will help you confidently navigate the world of puppy food to give your new companion the best possible start.

@@ -8,6 +8,7 @@ export const healthProducts: Product[] = [
     price: "$34.91",
     rating: 4.7,
     badge: "Best Overall Joint Support",
+    tags: ["joint"],
   },
   {
     title: "VetIQ Glucosamine Hip & Joint Soft Chews",
@@ -15,6 +16,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Glucosamine-Supplement-Supplies-Flavored-Chewables/dp/B01AMTU1ZM?linkCode=ll2&tag=dogguidehub-20&linkId=97eb1414b6bc29d68723857619a90a21&language=en_US&ref_=as_li_ss_tl",
     price: "$22.94",
     rating: 4.6,
+    tags: ["joint"],
   },
   {
     title: "Nutramax Proviable Probiotics",
@@ -23,6 +25,7 @@ export const healthProducts: Product[] = [
     price: "$19.97",
     rating: 4.6,
     badge: "Best for Digestive Health",
+    tags: ["digestive-health", "probiotic"],
   },
   {
     title: "Veterinary Formula Antiseptic & Antifungal Spray",
@@ -31,6 +34,7 @@ export const healthProducts: Product[] = [
     price: "$9.92",
     rating: 4.5,
     badge: "Best Value Itch Relief",
+    tags: ["skin-coat"],
   },
   {
     title: "Virbac Epi-Otic Advanced Ear Cleanser",
@@ -39,6 +43,7 @@ export const healthProducts: Product[] = [
     price: "$13.59",
     rating: 4.7,
     badge: "Vet Favorite",
+    tags: ["ear-care"],
   },
   {
     title: "Seresto Flea & Tick Collar (Over 18 lbs.)",
@@ -47,6 +52,7 @@ export const healthProducts: Product[] = [
     price: "$59.92",
     rating: 4.5,
     badge: "Longest Protection",
+    tags: ["flea-tick", "large-breed"],
   },
   {
     title: "Nutramax Cosequin with Omega-3s Soft Chews",
@@ -54,6 +60,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Cosequin-Chews-Maximum-Strength-Omega/dp/B01G3V3P0Q?linkCode=ll2&tag=dogguidehub-20&linkId=e4d35bbfe94f5f81e07596a3349f9308&language=en_US&ref_=as_li_ss_tl",
     price: "$39.99",
     rating: 4.7,
+    tags: ["joint", "skin-coat"],
   },
   {
     title: "Senior Advanced Glucosamine Chondroitin Chews",
@@ -61,6 +68,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Senior-Advanced-Glucosamine-Joint-Supplement/dp/B0B56G9DX7?linkCode=ll2&tag=dogguidehub-20&linkId=0a0489d77a6ddd645858e52fded420e7&language=en_US&ref_=as_li_ss_tl",
     price: "$32.84",
     rating: 4.5,
+    tags: ["joint", "senior"],
   },
   {
     title: "Nutramax Cosequin for Senior Dogs",
@@ -68,6 +76,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Nutramax-COSEQUIN-Senior-Glucosamine-Chondroitin/dp/B07218JGWH?linkCode=ll2&tag=dogguidehub-20&linkId=5920052cc5525e36662930c1c7a033c8&language=en_US&ref_=as_li_ss_tl",
     price: "$24.97",
     rating: 4.6,
+    tags: ["joint", "senior"],
   },
   {
     title: "VetriScience Extra Strength Hip & Joint Chews",
@@ -75,6 +84,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/VetriScience-Glycoflex-Clinically-Proven-Supplement/dp/B002LVTTYE?linkCode=ll2&tag=dogguidehub-20&linkId=8fba78fc0f99fa8ee54451644974e44d&language=en_US&ref_=as_li_ss_tl",
     price: "$28.92",
     rating: 4.6,
+    tags: ["joint"],
   },
   {
     title: "Purina Pro Plan FortiFlora Probiotic Supplement",
@@ -82,6 +92,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Purina-Veterinary-Fortiflora-Nutritional-Supplement/dp/B001650NNW?linkCode=ll2&tag=dogguidehub-20&linkId=875810d7dda70546ae9b95472a33099d&language=en_US&ref_=as_li_ss_tl",
     price: "$30.99",
     rating: 4.7,
+    tags: ["digestive-health", "probiotic"],
   },
   {
     title: "Native Pet Dog Probiotic Powder",
@@ -89,6 +100,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Native-Pet-Probiotic-Dogs-Probiotics/dp/B0BS4SVVCK?linkCode=ll2&tag=dogguidehub-20&linkId=ed6d8c3a08ca3f2fd0906abd9f913741&language=en_US&ref_=as_li_ss_tl",
     price: "$19.99",
     rating: 4.5,
+    tags: ["digestive-health", "probiotic"],
   },
   {
     title: "Purina Pro Plan FortiFlora Chewable Tablets",
@@ -96,6 +108,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Purina-Fortiflora-Veterinary-FortiFlora-Supplements/dp/B083XD2V4C?linkCode=ll2&tag=dogguidehub-20&linkId=ddb868b2ee0ebe6402de74fc3c31cbd3&language=en_US&ref_=as_li_ss_tl",
     price: "$80.99",
     rating: 4.7,
+    tags: ["digestive-health", "probiotic"],
   },
   {
     title: "Douxo S3 Calm Itch Soothing Mousse",
@@ -103,6 +116,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Douxo-Contains-Ophytrium-Soothing-Irritated/dp/B0947957N5?linkCode=ll2&tag=dogguidehub-20&linkId=cc92b69a7f5bdd009f2b7149b21801a2&language=en_US&ref_=as_li_ss_tl",
     price: "$25.96",
     rating: 4.5,
+    tags: ["skin-coat", "allergy-friendly"],
   },
   {
     title: "Vetnique Dermabliss Chlorhexidine Spray",
@@ -110,6 +124,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Vetnique-Dermabliss-Chlorhexidine-Antispetic-Irritations/dp/B0CD2SP76T?linkCode=ll2&tag=dogguidehub-20&linkId=9d0300ad73330a22badb49224f121046&language=en_US&ref_=as_li_ss_tl",
     price: "$17.99",
     rating: 4.5,
+    tags: ["skin-coat"],
   },
   {
     title: "VetWELL Ear Cleaner (Cucumber Melon)",
@@ -117,6 +132,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/VetWELL-Ear-Cleaner-Dogs-Cats/dp/B07657TQ5X?linkCode=ll2&tag=dogguidehub-20&linkId=8f34cc1e9d0ddcaf0e7b19b445e07a20&language=en_US&ref_=as_li_ss_tl",
     price: "$13.99",
     rating: 4.6,
+    tags: ["ear-care"],
   },
   {
     title: "Pet MD Dog Ear Cleaning Wipes",
@@ -124,6 +140,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Pet-MD-Cleaner-Cleanser-Eucalyptus/dp/B01IRO7WR4?linkCode=ll2&tag=dogguidehub-20&linkId=4c0c4e03cef1a1e01f0b32b2c0a313c2&language=en_US&ref_=as_li_ss_tl",
     price: "$14.99",
     rating: 4.6,
+    tags: ["ear-care"],
   },
   {
     title: "K9 Advantix II XL Flea, Tick & Mosquito Treatment",
@@ -131,6 +148,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Flea-tick-Prevention-Treatment-Advantix/dp/B07NX2VWYC?linkCode=ll2&tag=dogguidehub-20&linkId=934b0fe54e623089e84fdc02c56f8717&language=en_US&ref_=as_li_ss_tl",
     price: "$19.97",
     rating: 4.5,
+    tags: ["flea-tick", "large-breed"],
   },
   {
     title: "Advantage II Small Dog Flea Treatment",
@@ -138,6 +156,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Flea-Lice-Treatment-doses-Advantage/dp/B004QRHSDU?linkCode=ll2&tag=dogguidehub-20&linkId=0eec1072e02075386515392dfcf66e67&language=en_US&ref_=as_li_ss_tl",
     price: "$50.98",
     rating: 4.5,
+    tags: ["flea-tick", "small-breed"],
   },
   {
     title: "Hemp Calming Chews with Melatonin",
@@ -145,6 +164,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Hemp-Calming-Chews-Dogs-Supplement/dp/B0F7NFXDV1?linkCode=ll2&tag=dogguidehub-20&linkId=9b83ecfa292911d509746677049b40f0&language=en_US&ref_=as_li_ss_tl",
     price: "$26.99",
     rating: 4.3,
+    tags: ["calming"],
   },
   {
     title: "BARK&SPARK Advanced Calming Chews",
@@ -152,6 +172,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Bark-Spark-Advanced-Calming-Treats/dp/B0F9Z4GKJL?linkCode=ll2&tag=dogguidehub-20&linkId=1d196ca953a6c44eb30f74fa474a487b&language=en_US&ref_=as_li_ss_tl",
     price: "$15.97",
     rating: 4.3,
+    tags: ["calming"],
   },
   {
     title: "Purina Pro Plan Calming Care Supplement",
@@ -159,6 +180,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Purina-Plan-Veterinary-Supplements-Calming/dp/B0BGV8L7L2?linkCode=ll2&tag=dogguidehub-20&linkId=d3e1c83f81623d7523d35378597546b8&language=en_US&ref_=as_li_ss_tl",
     price: "$33.99",
     rating: 4.3,
+    tags: ["calming"],
   },
   {
     title: "PETLIBRO Stainless Steel Pet Water Fountain",
@@ -166,6 +188,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/PETLIBRO-Stainless-Automatic-Dispenser-Adjustable/dp/B0GDCZCXMY?linkCode=ll2&tag=dogguidehub-20&linkId=4ef5ed7edec7484e3d2bb66176adb474&language=en_US&ref_=as_li_ss_tl",
     price: "$37.99",
     rating: 4.6,
+    tags: ["hydration", "small-breed"],
   },
   {
     title: "PetSafe Drinkwell Platinum Water Fountain",
@@ -173,6 +196,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/PetSafe-Drinkwell-Platinum-Fountain-Drinking/dp/B000L3XYZ4?linkCode=ll2&tag=dogguidehub-20&linkId=7854a2e5f9046193a3c53d7be433e16d&language=en_US&ref_=as_li_ss_tl",
     price: "$42.74",
     rating: 4.3,
+    tags: ["hydration"],
   },
   {
     title: "iProven Dog & Cat Thermometer",
@@ -180,6 +204,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Digital-Medical-Pet-Thermometer-Animal-Dog/dp/B07BDFZCSV?linkCode=ll2&tag=dogguidehub-20&linkId=04f912fe06b45caa8b292df9dcda91f0&language=en_US&ref_=as_li_ss_tl",
     price: "$9.99",
     rating: 4.5,
+    tags: ["wellness-monitoring"],
   },
   {
     title: "HomeoPet Cough Supplement",
@@ -187,6 +212,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/HomeoPet-14706-Cough-15-ml/dp/B000Y1MS5K?linkCode=ll2&tag=dogguidehub-20&linkId=5cc6398016d1ab10c7c18fecdafabaf4&language=en_US&ref_=as_li_ss_tl",
     price: "$19.49",
     rating: 4.2,
+    tags: ["cough-respiratory"],
   },
   {
     title: "Greenies Dental Dog Treats",
@@ -195,6 +221,7 @@ export const healthProducts: Product[] = [
     price: "$39.96",
     rating: 4.8,
     badge: "Best Dental Chew",
+    tags: ["dental", "treats"],
   },
   {
     title: "Pedigree Dentastix Variety Pack",
@@ -202,6 +229,7 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/PEDIGREE-DENTASTIX-Original-Variety-lb-Pack/dp/B00CU2CMOI?linkCode=ll2&tag=dogguidehub-20&linkId=5a1b5943ba7c829569737172a45aab89&language=en_US&ref_=as_li_ss_tl",
     price: "$23.98",
     rating: 4.8,
+    tags: ["dental", "treats"],
   },
   {
     title: "Purina DentaLife Daily Dental Chews",
@@ -209,5 +237,6 @@ export const healthProducts: Product[] = [
     link: "https://www.amazon.com/Purina-Dentalife-Daily-Large-Treats/dp/B0186R3OUG?linkCode=ll2&tag=dogguidehub-20&linkId=75df332689ecddb58195a7fa0eafeed8&language=en_US&ref_=as_li_ss_tl",
     price: "$7.87",
     rating: 4.7,
+    tags: ["dental", "large-breed"],
   },
 ];

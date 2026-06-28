@@ -7,25 +7,6 @@ date: 2026-06-26
 draft: false
 featured: false
 metaDescription: "Are wellness pet insurance plans worth it in 2026? Learn how the scheduled-benefit model works and when a wellness add-on actually saves money for your dog."
-affiliateProducts:
-  - title: "Spot Pet Insurance Wellness Add-On"
-    description: "Transparent Basic and Premium wellness tiers added to a strong base accident & illness policy, with an efficient claims process."
-    link: "https://www.spotpetins.com/your-affiliate-link"
-    price: "$15-$35/mo add-on"
-    rating: 4.5
-    badge: "Best Customizable Wellness"
-  - title: "Lemonade Pet Insurance Wellness Add-On"
-    description: "App-based claims that settle in seconds, with highly customizable wellness add-ons and a charity giveback program."
-    link: "https://www.lemonade.com/your-affiliate-link"
-    price: "Varies"
-    rating: 4.5
-    badge: "Best Tech-Savvy Option"
-  - title: "Pet Assure Mint Wellness"
-    description: "A standalone wellness plan with no age limits and no pre-existing condition exclusions, plus a 25% veterinary discount plan."
-    link: "https://www.petassure.com/your-affiliate-link"
-    price: "From $18/mo"
-    rating: 4.4
-    badge: "Best Standalone Option"
 ---
 
 When your dog's annual exam rolls around, you expect a few things: a tail wag, a nose boop, and a bill that always seems a little higher than you remembered. Between vaccines, fecal tests, and heartworm prevention, routine care costs add up. While standard pet insurance is designed to protect you from the financial shock of a broken leg or a cancer diagnosis, it typically doesn't cover these everyday expenses. That's where wellness pet insurance plans — more accurately called wellness add-ons or preventative care plans — come into play.

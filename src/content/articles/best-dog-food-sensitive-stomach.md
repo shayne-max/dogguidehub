@@ -7,18 +7,6 @@ date: 2026-06-20
 draft: false
 featured: true
 metaDescription: "Compare the best dog food options for sensitive stomachs, reviewed for ingredients, digestibility, and value."
-affiliateProducts:
-  - title: "Best for Sensitive Stomachs"
-    description: "Limited-ingredient formula that's gentle on digestion, vet recommended."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$48.99"
-    rating: 4.6
-    badge: "Editor's Pick"
-  - title: "Best Budget Option"
-    description: "Affordable sensitive-stomach formula without fillers."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$32.99"
-    rating: 4.3
 ---
 
 If your dog has a sensitive stomach, choosing the right food can make the difference between constant vet visits and a happy, settled pup. In this guide, we break down what actually causes digestive issues in dogs and which foods consistently perform best.

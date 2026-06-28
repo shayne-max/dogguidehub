@@ -7,25 +7,6 @@ date: 2026-06-23
 draft: false
 featured: false
 metaDescription: "Learn the 2026 inflammation-forward approach to canine arthritis, including early detection, weight management, and new anti-NGF monoclonal therapies."
-affiliateProducts:
-  - title: "Dasuquin with MSM"
-    description: "Combines glucosamine, chondroitin sulfate, and ASU (Avocado Soybean Unsaponifiables) for cartilage protection and joint repair."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.7
-    badge: "Vet Gold Standard"
-  - title: "GlycoFlex Stage III Joint Support Chews"
-    description: "High-potency formula featuring green-lipped mussel, a powerful source of omega-3s proven to reduce inflammation and improve mobility."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$42.99"
-    rating: 4.6
-    badge: "Best for Moderate-Severe OA"
-  - title: "VetriScience GlycoFlex Plus Bite-Sized Chews"
-    description: "A balanced daily chew combining green-lipped mussel, glucosamine, MSM, and vitamin C in a palatable chicken flavor."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$32.99"
-    rating: 4.5
-    badge: "Best Daily Maintenance"
 ---
 
 **Short Summary:** Canine osteoarthritis is a progressive inflammatory disease, not just "wear and tear." This guide covers the latest 2026 insights, from early diagnosis in young dogs to advanced treatments like anti-NGF monoclonal antibodies and radiosynoviorthesis, empowering you with a multimodal approach to keep your dog comfortable and active.

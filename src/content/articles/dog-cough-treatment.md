@@ -7,23 +7,6 @@ date: 2026-06-23
 draft: false
 featured: false
 metaDescription: "Learn how vets treat dog cough in 2026, including kennel cough, chronic bronchitis, tracheal collapse, and which cough suppressants are actually effective."
-affiliateProducts:
-  - title: "OTC Canine Cough Tablets (Guaifenesin + Dextromethorphan)"
-    description: "An expectorant-suppressant combination for temporary relief of mild cough symptoms from upper respiratory infections — not for chronic coughs."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$14.99"
-    rating: 4.2
-    badge: "Mild Symptom Relief"
-  - title: "Cool Mist Humidifier"
-    description: "Keeps airways moist and soothes irritated respiratory tissue, a simple supportive measure for any dog with a persistent cough."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$29.99"
-    rating: 4.5
-  - title: "Raw Manuka Honey"
-    description: "A traditional soothing remedy for a dry, scratchy throat — check with your vet on dosing and any medication interactions first."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$19.99"
-    rating: 4.4
 ---
 
 **Summary:** A dog's cough is never normal and always warrants attention. This guide provides a veterinarian-informed overview of the causes, the latest treatment protocols for 2026, and a comparison of medication options to help you understand the path to relief for your canine companion.

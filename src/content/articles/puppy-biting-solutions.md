@@ -7,24 +7,6 @@ date: 2026-06-24
 draft: false
 featured: false
 metaDescription: "Learn how to stop puppy biting in 2026 with a science-backed plan covering time-outs, redirection, and the best chew toys for the teething phase."
-affiliateProducts:
-  - title: "KONG Puppy Chew Toy"
-    description: "Durable but gentle rubber with a hollow center to stuff with kibble or peanut butter, turning chewing into a rewarding puzzle."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$11.99"
-    rating: 4.8
-    badge: "Gold Standard"
-  - title: "Nylabone Puppy Chew Starter Kit"
-    description: "A variety of textures and flavors designed for the puppy stage — ideal for swapping in the moment a puppy starts mouthing your hand."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$14.99"
-    rating: 4.6
-    badge: "Best for Redirection"
-  - title: "Mammoth Flossy Chews Cottonblend Rope Toy"
-    description: "An interactive tug toy that satisfies the instinct to pull and shake without using your hands as the target — supervised play only."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$9.99"
-    rating: 4.5
 ---
 
 **Summary:** Puppy biting is a normal but painful developmental stage driven by teething, play, and exploration. This guide provides a science-backed, step-by-step plan to manage and reduce biting using positive reinforcement, appropriate chew toys, and consistent training, ensuring your puppy grows into a well-mannered adult dog.

@@ -7,23 +7,6 @@ date: 2026-06-23
 draft: false
 featured: false
 metaDescription: "Learn why dog ear infections keep recurring in 2026, including miconazole resistance, new antibiotic-free treatments, and at-home maintenance care."
-affiliateProducts:
-  - title: "Zymox Ear Cleanser with Biofilm Defense"
-    description: "Enzyme-based cleaner using a natural Lactoperoxidase and Lysozyme system to manage bacteria and yeast without harsh chemicals."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$17.99"
-    rating: 4.6
-    badge: "Best for Maintenance"
-  - title: "Virbac Epi-Otic Advanced Ear Cleanser"
-    description: "A veterinary clinic staple that gently removes debris, wax, and excess moisture for routine ear care in allergy-prone dogs."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$14.99"
-    rating: 4.5
-  - title: "Vetnique Oticbliss Advanced Strength"
-    description: "Combines chlorhexidine and ketoconazole with aloe vera for a deep-cleaning flush during mild flares, as directed by a vet."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$19.99"
-    rating: 4.4
 ---
 
 **Summary:** Canine ear infections are more than just a nuisance — they are a complex, often painful condition that is becoming increasingly difficult to treat due to rising antimicrobial resistance. This guide explores the latest 2026 veterinary insights into why ear infections recur, the new "azole-resistant" yeast threat, and how long-acting, antibiotic-free treatments are changing the game for dog owners.

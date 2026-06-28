@@ -7,25 +7,6 @@ date: 2026-06-24
 draft: false
 featured: false
 metaDescription: "Learn how to potty train a puppy in 2026 with a science-backed schedule, the 3-day sprint method, and the best crates, cleaners, and bell tools."
-affiliateProducts:
-  - title: "MidWest iCrate Fold & Carry Double Door Crate"
-    description: "Includes a divider panel to adjust crate size as your puppy grows, preventing them from eliminating in one corner and sleeping in another."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$54.99"
-    rating: 4.7
-    badge: "Best Crate"
-  - title: "Nature's Miracle Stain and Odor Remover"
-    description: "Enzymatic cleaner that breaks down urine proteins at a molecular level, preventing re-marking of the same indoor spot."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$12.99"
-    rating: 4.6
-    badge: "Essential Cleanup"
-  - title: "Mighty Paw Smart Bell 2.0"
-    description: "A wireless doorbell system that teaches your puppy to signal when they need to go out, with a built-in 3-step training plan."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$24.99"
-    rating: 4.5
-    badge: "Best Signal Tool"
 ---
 
 **Short Summary:** Potty training a puppy is a crucial developmental milestone that requires patience, consistency, and an understanding of your puppy's physical limitations. This comprehensive guide provides a modern, science-backed approach to housetraining, offering a step-by-step plan, product recommendations, and solutions for common challenges faced by US dog owners in 2026.

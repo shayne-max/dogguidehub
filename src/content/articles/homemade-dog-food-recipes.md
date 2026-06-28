@@ -7,23 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Learn how to make safe, balanced homemade dog food in 2026, including two vet-informed recipes and the essential supplements your dog's diet needs."
-affiliateProducts:
-  - title: "Balance IT Canine Supplement"
-    description: "Veterinarian-formulated powdered supplement that bridges the nutritional gaps in homemade diets, ensuring correct calcium, vitamin, and mineral ratios."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$34.99"
-    rating: 4.8
-    badge: "Essential Supplement"
-  - title: "Nordic Naturals Omega-3 Pet Soft Gels"
-    description: "High-purity EPA and DHA omega-3 supplement for shiny coat, joint health, and cognitive function — fills a common homemade-diet gap."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$24.99"
-    rating: 4.7
-  - title: "Hamilton Beach Food Processor & Vegetable Chopper"
-    description: "Speeds up weekly meal prep by finely chopping vegetables for better digestibility and nutrient absorption."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$39.99"
-    rating: 4.5
 ---
 
 **Short Summary:** Homemade dog food offers unparalleled control over ingredients and freshness, but getting it right requires knowledge, planning, and a commitment to nutritional balance. This guide provides a veterinarian-informed overview of the benefits, risks, and practical steps for creating healthy, balanced meals for your dog, including expert-approved recipes and essential supplement recommendations.

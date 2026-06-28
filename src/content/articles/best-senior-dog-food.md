@@ -7,24 +7,6 @@ date: 2026-06-21
 draft: false
 featured: false
 metaDescription: "Find the best senior dog food in 2026 with this vet-informed guide covering protein needs, joint and cognitive support, and trusted brand comparisons."
-affiliateProducts:
-  - title: "Purina Pro Plan AdvantEDGE Senior Support+"
-    description: "Targets cognition, immune health, and mobility with Bright Mind technology, a clinically proven immune blend, and glucosamine plus EPA for joints."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$56.99"
-    rating: 4.8
-    badge: "Best Overall"
-  - title: "Hill's Science Diet Adult 7+ Youthful Vitality"
-    description: "Vet-recommended formula with high-quality protein for muscle maintenance, L-carnitine, and omega-3s in an easy-to-digest recipe."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$52.99"
-    rating: 4.7
-  - title: "Purina ONE SmartBlend Vibrant Maturity 7+"
-    description: "Chicken as the #1 ingredient, glucosamine for joints, and botanical oils for mental sharpness at a more accessible price point."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$38.99"
-    rating: 4.5
-    badge: "Best Value"
 ---
 
 **Summary:** Choosing the right food for your senior dog can be confusing, as no official nutritional standards exist for this life stage. This guide cuts through the marketing, explaining what aging truly does to your dog's body and providing a vet-informed framework for selecting a diet that supports their healthspan. We'll review top products and offer expert tips to help you make the best choice for your furry family member.

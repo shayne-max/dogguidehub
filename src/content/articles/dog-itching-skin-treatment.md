@@ -7,23 +7,6 @@ date: 2026-06-22
 draft: false
 featured: false
 metaDescription: "Explore the latest 2026 treatments for dog itching skin, from new prescription therapies to OTC sprays, creams, and supplements that support skin health."
-affiliateProducts:
-  - title: "TropiClean HomeVet Itch & Allergy Spray"
-    description: "Contains hydrocortisone, colloidal oatmeal, and glycerin for fast, temporary relief of mild allergies and dry, itchy skin."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$16.99"
-    rating: 4.5
-    badge: "Best First-Line OTC"
-  - title: "TropiClean HomeVet Hot Spot Cream"
-    description: "Combines lidocaine, hydrocortisone, and chlorhexidine for targeted relief of hot spots and persistent localized irritation."
-    link: "https://www.chewy.com/your-affiliate-link"
-    price: "$18.99"
-    rating: 4.4
-  - title: "Omega-3 Fish Oil Supplement"
-    description: "Supports skin barrier function and reduces inflammation from the inside out, complementing topical and dietary skin care."
-    link: "https://www.amazon.com/your-affiliate-link"
-    price: "$22.99"
-    rating: 4.6
 ---
 
 If your dog won't stop scratching, you're not alone. Itching is one of the top reasons US dog owners seek veterinary care, and the landscape of available treatments has changed dramatically in 2026. This guide covers everything from novel prescription therapies to essential over-the-counter solutions for dog itching skin treatment.
