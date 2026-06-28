@@ -11,6 +11,275 @@ const allArticles = await getCollection("articles", ({ data }) => !data.draft);
 const trainingArticles = allArticles
   .filter((entry) => entry.data.category === "Training")
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const products = [
+  {
+    title: "Gobeigo Treat Pouch with Training Clicker",
+    description: "Two-magnet closure treat bag with built-in clicker and poop bag dispenser, 2-cup capacity — keeps rewards instantly accessible.",
+    link: "https://www.amazon.com/Gobeigo-Training-Clicker-Magnetic-Dispenser/dp/B0D9GFLLYP?linkCode=ll2&tag=dogguidehub-20&linkId=ae2b4dc638dfa66827e54451f472a274&language=en_US&ref_=as_li_ss_tl",
+    price: "$15.99",
+    rating: 4.8,
+    badge: "Top Rated",
+  },
+  {
+    title: "Greenies Pill Pockets for Dogs (Large)",
+    description: "Peanut butter-flavored treat pouches designed to hide capsule medication, 15.8 oz. pouch.",
+    link: "https://www.amazon.com/Greenies-Pockets-Natural-Treats-Capsule/dp/B07S2TDDCK?linkCode=ll2&tag=dogguidehub-20&linkId=6d9a80eb0a7a313ea1da3cbc5ee42086&language=en_US&ref_=as_li_ss_tl",
+    price: "$17.89",
+    rating: 4.8,
+    badge: "Best for Medication",
+  },
+  {
+    title: "Fox 40 Classic Whistle (3-Pack)",
+    description: "Loud, pealess sports whistle with breakaway lanyard — a reliable option for distance recall training.",
+    link: "https://www.amazon.com/Fox-40-Classic-Breakaway-Lanyard/dp/B07MTK16ND?linkCode=ll2&tag=dogguidehub-20&linkId=aa6a61f62c663af1f25a72fa5eee3294&language=en_US&ref_=as_li_ss_tl",
+    price: "$24.99",
+    rating: 4.8,
+    badge: "Pro Choice",
+  },
+  {
+    title: "Dog Treat Pouch - 3 Ways to Wear",
+    description: "Convertible treat bag worn as shoulder strap, belt, or crossbody, with clicker and poop bag dispenser included.",
+    link: "https://www.amazon.com/Training-Walking-Shoulder-Dispenser-Clicker/dp/B07N2Q8414?linkCode=ll2&tag=dogguidehub-20&linkId=e0e7c3aa6b406c91f01401f9201fb4b1&language=en_US&ref_=as_li_ss_tl",
+    price: "$12.99",
+    rating: 4.7,
+  },
+  {
+    title: "Gobeigo Silicone 4-Cup Treat Pouch",
+    description: "Magnetic-closure pouch with sealable silicone insert and 4-cup capacity — wear it on belt, waist, or crossbody.",
+    link: "https://www.amazon.com/Gobeigo-Silicone-Training-Stronger-Magnetic/dp/B0D9XXYG5K?linkCode=ll2&tag=dogguidehub-20&linkId=7a8554535cd8bd828d71ad7f662fea23&language=en_US&ref_=as_li_ss_tl",
+    price: "$20.99",
+    rating: 4.7,
+  },
+  {
+    title: "KONG Classic Stuffable Dog Toy",
+    description: "Durable natural-rubber toy with erratic bounce and treat-filling capability — supports crate training and reduces destructive chewing.",
+    link: "https://www.amazon.com/KONG-Classic-Durable-Natural-Rubber/dp/B0002AR0I8?linkCode=ll2&tag=dogguidehub-20&linkId=d53828707d534dd6089f91276b6ae356&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.96",
+    rating: 4.6,
+    badge: "Best Seller",
+  },
+  {
+    title: "tobeDRI No-Pull Dog Harness with Free Leash",
+    description: "Adjustable reflective Oxford harness for easy control, includes a free heavy-duty 5 ft leash.",
+    link: "https://www.amazon.com/tobeDRI-Harness-Adjustable-Reflective-Control/dp/B086PCQ3HQ?linkCode=ll2&tag=dogguidehub-20&linkId=5debbd216a4eb705a669139507868bf9&language=en_US&ref_=as_li_ss_tl",
+    price: "$19.99",
+    rating: 4.6,
+  },
+  {
+    title: "Best Pet Supplies Voyager Step-in Air Harness",
+    description: "All-weather mesh, reflective step-in harness secured with hook-and-loop fastener, buckle, and double D-rings.",
+    link: "https://www.amazon.com/Best-Pet-Supplies-Voyager-Harness/dp/B0FH8HTDYQ?linkCode=ll2&tag=dogguidehub-20&linkId=161c482515a19021ecb12f72008c9d21&language=en_US&ref_=as_li_ss_tl",
+    price: "$12.28",
+    rating: 4.6,
+  },
+  {
+    title: "Hipat Sports Whistle (2-Pack)",
+    description: "Loud, crisp plastic whistle with lanyard — an affordable option for basic recall cues.",
+    link: "https://www.amazon.com/Hipat-Whistle-Whistles-Referees-Officials/dp/B07QWRP934?linkCode=ll2&tag=dogguidehub-20&linkId=2ff6c7736c65ab3566542307e78c9489&language=en_US&ref_=as_li_ss_tl",
+    price: "$5.99",
+    rating: 4.6,
+  },
+  {
+    title: "BLUETREE Dog Doorbells",
+    description: "Adjustable door bells dogs can ring with their nose or paw — a simple tool for potty training communication.",
+    link: "https://www.amazon.com/BLUETREE-Doorbells-Premium-Training-Adjustable/dp/B097BQYZC5?linkCode=ll2&tag=dogguidehub-20&linkId=0f8b975c8a8d6f5f383022b12d95b62a&language=en_US&ref_=as_li_ss_tl",
+    price: "$6.99",
+    rating: 4.6,
+  },
+  {
+    title: "TagME 6ft Slip Dog Lead",
+    description: "Reflective no-pull rope leash with padded handle — quick on/off control for walking and training.",
+    link: "https://www.amazon.com/TagME-Reflective-Training-Walking-Climbing/dp/B095775SWX?linkCode=ll2&tag=dogguidehub-20&linkId=326afa090ece88fb3c8bcba2e4a50d60&language=en_US&ref_=as_li_ss_tl",
+    price: "$8.99",
+    rating: 4.6,
+  },
+  {
+    title: "Wellbro Real Leather Slip Lead",
+    description: "Soft, adjustable rolled-leather slip leash with slider — a heavy-duty option for medium and large dogs.",
+    link: "https://www.amazon.com/Wellbro-Rolled-Leather-Adjustable-Training/dp/B07VPGPK7F?linkCode=ll2&tag=dogguidehub-20&linkId=499a5bba396dd4ff1e9340f755314ba0&language=en_US&ref_=as_li_ss_tl",
+    price: "$17.99",
+    rating: 4.6,
+  },
+  {
+    title: "lynxking Check Cord Long Training Lead",
+    description: "Heavy-duty tracking line with comfortable handle, available in multiple lengths for distance training.",
+    link: "https://www.amazon.com/lynxking-Training-Tracking-Medium-Orange/dp/B07VJ8FYCD?linkCode=ll2&tag=dogguidehub-20&linkId=9463c962546f5504a8ce339057539def&language=en_US&ref_=as_li_ss_tl",
+    price: "$18.49",
+    rating: 4.6,
+  },
+  {
+    title: "NTR 30 FT Dog Leash",
+    description: "Obedience recall and agility lead with 2 swivel hooks, reflective threads, and a soft handle.",
+    link: "https://www.amazon.com/NTR-Obedience-Training-Reflective-Dogs-Black/dp/B0C2GHMGVB?linkCode=ll2&tag=dogguidehub-20&linkId=c9acfc47cb6c685e29df6c3c1fef32b6&language=en_US&ref_=as_li_ss_tl",
+    price: "$15.69",
+    rating: 4.6,
+  },
+  {
+    title: "KONG Extreme Dog Toy (2-Pack)",
+    description: "Tough black rubber chew toy built for aggressive chewers, large size.",
+    link: "https://www.amazon.com/KONG-Extreme-Dental-Chew-Large/dp/B00SVEMNU2?linkCode=ll2&tag=dogguidehub-20&linkId=66c0184f966de4da9e43e8dd886f5147&language=en_US&ref_=as_li_ss_tl",
+    price: "$27.01",
+    rating: 4.6,
+  },
+  {
+    title: "heouvo Treat Pouch with Training Clicker",
+    description: "Stronger magnetic-closure silicone treat bag, 1.67-cup capacity, with waist belt to avoid spilling.",
+    link: "https://www.amazon.com/heouvo-Training-Stronger-Magnetic-Spilling/dp/B0CQQF67P1?linkCode=ll2&tag=dogguidehub-20&linkId=f01007e3ba07d417a2f3a5cbf2fdb2a9&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.99",
+    rating: 4.6,
+  },
+  {
+    title: "rabbitgoo No-Pull Dog Harness",
+    description: "Adjustable, reflective vest harness with easy control handle and 2 leash clips — gently discourages pulling on walks.",
+    link: "https://www.amazon.com/Rabbitgoo-Harness-Adjustable-Reflective-Material/dp/B01M8JT6FT?linkCode=ll2&tag=dogguidehub-20&linkId=12243b2747f74e8b5f5293c54fb6dbb9&language=en_US&ref_=as_li_ss_tl",
+    price: "$20.98",
+    rating: 4.5,
+  },
+  {
+    title: "PHOEPET No-Pull Harness (Orange)",
+    description: "Reflective front-clip vest harness with handle, adjustable 2 metal rings and 3 buckles for easy on/off.",
+    link: "https://www.amazon.com/PHOEPET-Harness-Reflective-Adjustable-Buckles/dp/B07GVCFQV6?linkCode=ll2&tag=dogguidehub-20&linkId=c7881cdf461b7ad50776eb8676a265a2&language=en_US&ref_=as_li_ss_tl",
+    price: "$15.83",
+    rating: 4.5,
+  },
+  {
+    title: "rabbitgoo No-Pull Harness for Large Dogs",
+    description: "Easy on/off harness with 3 buckles, adjustable soft walking vest, 2 clips, handle, and reflective trim.",
+    link: "https://www.amazon.com/rabbitgoo-Harness-Buckles-Adjustable-Reflective/dp/B0CQX3XCPK?linkCode=ll2&tag=dogguidehub-20&linkId=a5ccce0938c9ebcc3b669c87c65acfb8&language=en_US&ref_=as_li_ss_tl",
+    price: "$18.98",
+    rating: 4.5,
+  },
+  {
+    title: "PHOEPET No-Pull Harness (Grey)",
+    description: "Reflective front-clip vest harness with handle, adjustable 2 metal rings and 2 buckles.",
+    link: "https://www.amazon.com/PHOEPET-Harness-Reflective-Adjustable-Buckles/dp/B07M768YMD?linkCode=ll2&tag=dogguidehub-20&linkId=b0ce079d74d1697710d1dc5e77f5ae71&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.97",
+    rating: 4.5,
+  },
+  {
+    title: "COCOYO Puppy Training Pads (30 ct)",
+    description: "Super-absorbent, leak-proof pee pads — a reliable assist for indoor potty training routines.",
+    link: "https://www.amazon.com/U-play-Best-Value-Training-Pads/dp/B07L72ST5Q?linkCode=ll2&tag=dogguidehub-20&linkId=b9e057c59acaf4dd714e562a93ce27b1&language=en_US&ref_=as_li_ss_tl",
+    price: "$7.33",
+    rating: 4.5,
+  },
+  {
+    title: "Amazon Basics Leak-Proof Pee Pads (150 ct)",
+    description: "Quick-dry 5-layer super absorbent pads for housebreaking, regular 22x22\" size.",
+    link: "https://www.amazon.com/Amazon-Basics-Leak-Proof-Quick-Dry-Absorbency/dp/B00MW8G6OC?linkCode=ll2&tag=dogguidehub-20&linkId=749c1779206ab3467adc010869721903&language=en_US&ref_=as_li_ss_tl",
+    price: "$28.49",
+    rating: 4.5,
+  },
+  {
+    title: "Honey Care All-Absorb Training Pads (120 ct)",
+    description: "Ultra-absorbent, odor-eliminating 5-layer pads with quick-dry surface, 17.5\" x 23.5\".",
+    link: "https://www.amazon.com/All-Absorb-Count-Training-23-5-Inch-White/dp/B00ODRO7W8?linkCode=ll2&tag=dogguidehub-20&linkId=69f4d8767d7e7e7b328949b38305b729&language=en_US&ref_=as_li_ss_tl",
+    price: "$19.98",
+    rating: 4.5,
+  },
+  {
+    title: "American Kennel Club Scented Training Pads (50 ct)",
+    description: "Fresh-scented XL pads with ultra-absorbent quick-dry gel and leak-proof design.",
+    link: "https://www.amazon.com/Ultra-Absorbent-Control-Training-Leak-proof/dp/B00PG3HBGM?linkCode=ll2&tag=dogguidehub-20&linkId=30f689f79bd8c5e76840927fcda59c69&language=en_US&ref_=as_li_ss_tl",
+    price: "$18.36",
+    rating: 4.5,
+  },
+  {
+    title: "Fida Durable Slip Lead",
+    description: "6 ft heavy-duty rope leash with reflective stitching — quick on/off control for loose-leash and recall training.",
+    link: "https://www.amazon.com/Fida-Durable-Comfortable-Training-Reflective/dp/B08Y5Z3J61?linkCode=ll2&tag=dogguidehub-20&linkId=df5fc347b9566616957378a252e023b7&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.99",
+    rating: 4.5,
+  },
+  {
+    title: "lynxking Strong Braided Slip Lead",
+    description: "Heavy-duty braided no-pull training lead, available in 5/6/8 ft lengths.",
+    link: "https://www.amazon.com/lynxking-Strong-Training-Leashes-Medium/dp/B07D7V2G1J?linkCode=ll2&tag=dogguidehub-20&linkId=a27f84c3fabcff213854fecbfc52e783&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.99",
+    rating: 4.5,
+  },
+  {
+    title: "lynxking Reflective Slip Lead",
+    description: "Comfortable, strong rope slip lead with reflective threading for no-pull training.",
+    link: "https://www.amazon.com/lynxking-Reflective-Comfortable-Training-6ft-Slip/dp/B0DF6LHQZ6?linkCode=ll2&tag=dogguidehub-20&linkId=823e5d15aea6c86bb4e7a0257a7f2ecd&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.99",
+    rating: 4.5,
+  },
+  {
+    title: "Hi Kiss Obedience Recall Training Lead",
+    description: "Long line for recall, agility, and backyard play — available from 15 ft up to 100 ft.",
+    link: "https://www.amazon.com/Hi-Kiss-Obedience-Training-Agility/dp/B071JV6J5J?linkCode=ll2&tag=dogguidehub-20&linkId=f881ac7dee6648fb1c743b6fc23cb29c&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.97",
+    rating: 4.5,
+  },
+  {
+    title: "Long Dog Leash with Reflective Threads",
+    description: "Heavy-duty tie-out lead for large, medium, and small dogs, available 10–100 ft.",
+    link: "https://www.amazon.com/Training-Reflective-Threads-Recall-Agility/dp/B0948DF2JL?linkCode=ll2&tag=dogguidehub-20&linkId=7a560c1a677a665cd62e51b57cd7ce2d&language=en_US&ref_=as_li_ss_tl",
+    price: "$15.99",
+    rating: 4.5,
+  },
+  {
+    title: "AmaGood Long Leash for Puppy Training",
+    description: "Lightweight long lead for outside walking and play, available in lengths from 15 to 100 ft.",
+    link: "https://www.amazon.com/AmaGood-Puppy-Leashes-Leads-Training/dp/B07SZNNCQK?linkCode=ll2&tag=dogguidehub-20&linkId=0431834dd4fa0b827b7240f3b4b9b790&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.49",
+    rating: 4.5,
+  },
+  {
+    title: "KONG Ring Chew Toy",
+    description: "Natural rubber ring toy that supports dental health and healthy chewing habits.",
+    link: "https://www.amazon.com/KONG-KM1-Ring-Med-Large/dp/B073SZ6NT8?linkCode=ll2&tag=dogguidehub-20&linkId=5c07729c8684e8d9352e295219a194a8&language=en_US&ref_=as_li_ss_tl",
+    price: "$9.96",
+    rating: 4.5,
+  },
+  {
+    title: "KONG Jumbler Ball",
+    description: "Interactive fetch toy combining a tennis ball with KONG rubber for engaging play.",
+    link: "https://www.amazon.com/KONG-Jumbler-Medium-Large-colors/dp/B00KNWYFVK?linkCode=ll2&tag=dogguidehub-20&linkId=4b78274505a63e2e053c45af9edccce4&language=en_US&ref_=as_li_ss_tl",
+    price: "$16.96",
+    rating: 4.5,
+  },
+  {
+    title: "KONG Goodie Bone",
+    description: "Classic durable rubber bone with treat-dispensing design to support mental engagement.",
+    link: "https://www.amazon.com/KONG-10011-Goodie-Bone-Medium/dp/B0002AQPA2?linkCode=ll2&tag=dogguidehub-20&linkId=ba0e2e500b80cc38addc9430300e4eac&language=en_US&ref_=as_li_ss_tl",
+    price: "$11.96",
+    rating: 4.5,
+  },
+  {
+    title: "Ruconla Training Clicker Set (4-Pack)",
+    description: "Four clickers with wrist straps — a budget-friendly multi-pack for household training.",
+    link: "https://www.amazon.com/Ruconla-Training-Clicker-Wrist-Strap/dp/B07GLS5M96?linkCode=ll2&tag=dogguidehub-20&linkId=6d8ee472f2008784ba74c04dd33d145b&language=en_US&ref_=as_li_ss_tl",
+    price: "$8.99",
+    rating: 4.4,
+  },
+  {
+    title: "Disposable Training Underpads (100 ct)",
+    description: "Leakproof, quick-drying 22\"x22\" underpads suitable for puppies and adult dogs.",
+    link: "https://www.amazon.com/Absorbency-Disposable-Underpads-Leakproof-Training/dp/B0CPPLLBHT?linkCode=ll2&tag=dogguidehub-20&linkId=98d8905ccc323f129342355a5f969f75&language=en_US&ref_=as_li_ss_tl",
+    price: "$27.99",
+    rating: 4.4,
+  },
+  {
+    title: "KONG Flyer Rubber Disc",
+    description: "Natural rubber flying disc designed to be safer on teeth and gums than hard plastic discs.",
+    link: "https://www.amazon.com/Kong-Rubber-Flyer-Large-Red/dp/B000BRTADK?linkCode=ll2&tag=dogguidehub-20&linkId=7eabb3acb8c4e82eb6c6eb99b6231569&language=en_US&ref_=as_li_ss_tl",
+    price: "$13.96",
+    rating: 4.4,
+  },
+  {
+    title: "Dog Training Clicker with Wrist Strap",
+    description: "Lightweight clicker with wrist strap and keyring — a simple, affordable tool for marker-based training.",
+    link: "https://www.amazon.com/Pet-Training-Clicker-Wrist-Strap/dp/B07F6FTTM7?linkCode=ll2&tag=dogguidehub-20&linkId=678ffa5dc8436b7e83b9557e956ddec8&language=en_US&ref_=as_li_ss_tl",
+    price: "$4.99",
+    rating: 4.3,
+  },
+];
+
+const visibleProducts = products.slice(0, 6);
+const extraProducts = products.slice(6);
 ---
 <Base
   title="Dog Training Guides"
@@ -49,35 +318,43 @@ const trainingArticles = allArticles
     </div>
   </section>
 
-  <section class="section alt-bg">
+  <section class="section alt-bg" id="recommended-products">
     <div class="container">
       <div class="section-title">
         <h2>Recommended Training Gear</h2>
+        <p>Top-rated harnesses, treat pouches, clickers, leashes, and toys for positive-reinforcement training.</p>
       </div>
-      <div class="grid grid-3">
-        <ProductBox
-          title="Front-Clip No-Pull Harness"
-          description="Gently turns your dog's body when they pull, protecting the trachea while giving you better control."
-          link="#"
-          rating={4.6}
-          price="$26.99"
-          badge="Best Seller"
-        />
-        <ProductBox
-          title="Training Treat Pouch"
-          description="Keeps high-value rewards instantly accessible for positive reinforcement training."
-          link="#"
-          rating={4.5}
-          price="$16.99"
-        />
-        <ProductBox
-          title="Kong Classic Chew Toy"
-          description="Durable, stuffable enrichment toy that supports crate training and reduces destructive chewing."
-          link="#"
-          rating={4.8}
-          price="$11.99"
-        />
+
+      <div class="grid grid-3" id="product-grid">
+        {visibleProducts.map((p) => (
+          <ProductBox
+            title={p.title}
+            description={p.description}
+            link={p.link}
+            rating={p.rating}
+            price={p.price}
+            badge={p.badge}
+          />
+        ))}
+        {extraProducts.map((p) => (
+          <div class="extra-product" style="display:none;">
+            <ProductBox
+              title={p.title}
+              description={p.description}
+              link={p.link}
+              rating={p.rating}
+              price={p.price}
+              badge={p.badge}
+            />
+          </div>
+        ))}
       </div>
+
+      {extraProducts.length > 0 && (
+        <div class="show-more-wrap">
+          <button id="toggle-products" class="btn btn-primary">View All Products →</button>
+        </div>
+      )}
     </div>
   </section>
 
@@ -94,7 +371,25 @@ const trainingArticles = allArticles
   />
 </Base>
 
+<script>
+  const toggleBtn = document.getElementById("toggle-products");
+  const extras = document.querySelectorAll(".extra-product");
+  let expanded = false;
+
+  toggleBtn?.addEventListener("click", () => {
+    expanded = !expanded;
+    extras.forEach((el) => {
+      (el as HTMLElement).style.display = expanded ? "block" : "none";
+    });
+    toggleBtn.textContent = expanded ? "Show Less ↑" : "View All Products →";
+  });
+</script>
+
 <style>
   .alt-bg { background: var(--bg-soft); }
   .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+  .show-more-wrap {
+    text-align: center;
+    margin-top: 28px;
+  }
 </style>
