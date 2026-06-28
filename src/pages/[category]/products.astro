@@ -1,0 +1,154 @@
+---
+import Base from "../../layouts/Base.astro";
+import ProductBox from "../../components/ProductBox.astro";
+import Newsletter from "../../components/Newsletter.astro";
+import { productsByCategory, categoryIntro, categoryLabel } from "../../data/products";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return Object.keys(productsByCategory).map((category) => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params as { category: string };
+const products = productsByCategory[category] ?? [];
+const label = categoryLabel[category] ?? category;
+const intro = categoryIntro[category] ?? "";
+
+const PAGE_SIZE = 12;
+const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
+const pages = Array.from({ length: totalPages }, (_, i) =>
+  products.slice(i * PAGE_SIZE, i * PAGE_SIZE + PAGE_SIZE)
+);
+---
+<Base
+  title={`All ${label} Products`}
+  description={`Browse our full list of recommended ${label.toLowerCase()} products — ${products.length} items, hand-picked by category.`}
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h1>All {label} Products</h1>
+        {products.length > 0 ? (
+          <p>{intro} ({products.length} product{products.length !== 1 ? "s" : ""})</p>
+        ) : (
+          <p>We're still finalizing our {label.toLowerCase()} picks — check back soon.</p>
+        )}
+      </div>
+
+      {products.length > 0 ? (
+        <>
+          <div class="grid grid-3" id="products-page-grid">
+            {pages.map((pageProducts, pageIndex) =>
+              pageProducts.map((p) => (
+                <div class="product-page-item" data-page={pageIndex + 1}>
+                  <ProductBox
+                    title={p.title}
+                    description={p.description}
+                    link={p.link}
+                    rating={p.rating}
+                    price={p.price}
+                    badge={p.badge}
+                  />
+                </div>
+              ))
+            )}
+          </div>
+
+          {totalPages > 1 && (
+            <nav class="pagination" id="pagination-nav" aria-label="Product pages">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <a href={`?page=${i + 1}`} class="page-link" data-page={i + 1}>
+                  {i + 1}
+                </a>
+              ))}
+            </nav>
+          )}
+        </>
+      ) : (
+        <p class="empty-state">No products yet — we're working on this list.</p>
+      )}
+
+      <div class="back-link-wrap">
+        <a href={`/${category}`} class="back-link">← Back to {label} guides</a>
+      </div>
+    </div>
+  </section>
+
+  <Newsletter />
+</Base>
+
+<script>
+  const PAGE_SIZE_ATTR = "data-page";
+  const items = document.querySelectorAll<HTMLElement>(".product-page-item");
+  const pageLinks = document.querySelectorAll<HTMLAnchorElement>(".page-link");
+
+  function getCurrentPage(): number {
+    const params = new URLSearchParams(window.location.search);
+    const raw = parseInt(params.get("page") || "1", 10);
+    return Number.isFinite(raw) && raw > 0 ? raw : 1;
+  }
+
+  function render() {
+    const current = getCurrentPage();
+
+    items.forEach((el) => {
+      const page = parseInt(el.getAttribute(PAGE_SIZE_ATTR) || "1", 10);
+      el.style.display = page === current ? "" : "none";
+    });
+
+    pageLinks.forEach((link) => {
+      const page = parseInt(link.getAttribute(PAGE_SIZE_ATTR) || "1", 10);
+      link.classList.toggle("active", page === current);
+    });
+  }
+
+  render();
+</script>
+
+<style>
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-weight: 700;
+    color: var(--text);
+    background: #fff;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .page-link:hover {
+    border-color: var(--primary);
+  }
+  .page-link.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  .empty-state {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+  }
+  .back-link-wrap {
+    text-align: center;
+    margin-top: 24px;
+  }
+  .back-link {
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+</style>

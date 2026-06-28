@@ -6,11 +6,15 @@ import ProductBox from "../components/ProductBox.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import CTA from "../components/CTA.astro";
 import Newsletter from "../components/Newsletter.astro";
+import { insuranceProducts } from "../data/products/insurance";
 
 const allArticles = await getCollection("articles", ({ data }) => !data.draft);
 const insuranceArticles = allArticles
   .filter((entry) => entry.data.category === "Insurance")
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const products = insuranceProducts;
+const visibleProducts = products.slice(0, 6);
 ---
 <Base
   title="Dog Insurance Guides"
@@ -23,38 +27,35 @@ const insuranceArticles = allArticles
     ctaLink="#plans"
   />
 
-  <section class="section" id="plans">
-    <div class="container">
-      <div class="section-title">
-        <h2>Top-Rated Insurance Plans</h2>
-        <p>Compared on coverage, claim speed, and customer satisfaction.</p>
+  {products.length > 0 && (
+    <section class="section" id="plans">
+      <div class="container">
+        <div class="section-title">
+          <h2>Top-Rated Insurance Plans</h2>
+          <p>Compared on coverage, claim speed, and customer satisfaction.</p>
+        </div>
+
+        <div class="grid grid-3" id="product-grid">
+          {visibleProducts.map((p) => (
+            <ProductBox
+              title={p.title}
+              description={p.description}
+              link={p.link}
+              rating={p.rating}
+              price={p.price}
+              badge={p.badge}
+            />
+          ))}
+        </div>
+
+        {products.length > 6 && (
+          <div class="show-more-wrap">
+            <a href="/insurance/products" class="btn btn-primary">View All Products →</a>
+          </div>
+        )}
       </div>
-      <div class="grid grid-3">
-        <ProductBox
-          title="Best Overall Plan"
-          description="Comprehensive accident & illness coverage with fast claims processing."
-          link="#"
-          rating={4.8}
-          price="From $25/mo"
-          badge="Best Overall"
-        />
-        <ProductBox
-          title="Best for Budget Owners"
-          description="Affordable accident-only coverage for cost-conscious owners."
-          link="#"
-          rating={4.5}
-          price="From $12/mo"
-        />
-        <ProductBox
-          title="Best for Senior Dogs"
-          description="No upper age limit and strong chronic-condition coverage."
-          link="#"
-          rating={4.6}
-          price="From $35/mo"
-        />
-      </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <section class="section alt-bg">
     <div class="container">
@@ -98,4 +99,8 @@ const insuranceArticles = allArticles
 <style>
   .alt-bg { background: var(--bg-soft); }
   .empty-state { text-align: center; color: #9ca3af; padding: 24px 0; }
+  .show-more-wrap {
+    text-align: center;
+    margin-top: 28px;
+  }
 </style>
