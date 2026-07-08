@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import DigitalProductCard from "../components/DigitalProductCard.astro";
+import { digitalProducts } from "../data/products/digital";
+---
+<Base
+  title="Digital Products for Dog Owners"
+  description="Printable and editable planners, trackers, and checklists for dog owners — feeding, health, and training made simple."
+>
+  <Hero
+    title="Printables for Dog Owners"
+    subtitle="Editable Excel and Google Sheets templates — feeding logs, health trackers, and training planners, ready to print or customize."
+    ctaText="Browse Products"
+    ctaLink="#products"
+  />
+
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Printables</h2>
+        <p>{digitalProducts.length} templates and counting.</p>
+      </div>
+
+      <div class="grid grid-3">
+        {digitalProducts.map((p) => (
+          <DigitalProductCard
+            title={p.title}
+            description={p.description}
+            image={p.image}
+            link={p.link}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
