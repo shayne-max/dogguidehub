@@ -6,6 +6,7 @@ import ProductBox from "../components/ProductBox.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import CTA from "../components/CTA.astro";
 import Newsletter from "../components/Newsletter.astro";
+import Carousel from "../components/Carousel.astro";
 
 const allArticles = await getCollection("articles", ({ data }) => !data.draft);
 
@@ -21,6 +22,7 @@ const popular = allArticles
     ctaText="Explore Guides"
     ctaLink="#guides"
   />
+<Carousel />
 
   <section class="section" id="guides">
     <div class="container">

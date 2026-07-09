@@ -27,4 +27,16 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { articles };
+const carousel = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/carousel" }),
+  schema: z.object({
+    title: z.string(),
+    tagline: z.string(),
+    image: z.string(),
+    link: z.string(),
+    order: z.number(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { articles, carousel };
